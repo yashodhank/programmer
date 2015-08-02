@@ -17,7 +17,12 @@ class APPToken(Document):
 		auth = filter(lambda x: x.user==self.owner, self.authenticated_users)
 		if not auth or not auth[0].auth_token:
 			request_auth_code(self.name, self.owner)
-		get_oauth_session(self.name, self.owner)
+		try:
+			get_oauth_session(self.name, self.owner)
+		except KeyError, e:
+			frappe.msgprint(e)
+			frappe.db.commit()
+			request_oauth_code(self.name, self.owner)
 
 def traverse_params(param_list, replacements={}):
 	response = {}
@@ -65,45 +70,66 @@ def request_oauth_code(service, user=None):
 
 	frappe.msgprint(msg)
 
-def _store_oauth_token(code, state):
+def _store_oauth_token(code=None, state=None):
+	if not code:
+		return {'FAIL': 'You did not authorized the request'}
 	from programmer.data_tools import get_uri_parsed
-	from pprint import pprint
 
 	data = json.loads(frappe.db.get_temp(state))
 	service = data['service']
 	user = data['user']
-
-	pprint(data)
-
 	filters = [
 		["APP Token User", "parent", "=", service],
 		["APP Token User", "user", "=", user]
 	]
+	doc = frappe.get_doc("APP Token", service)
+
+	replacers = {
+		"auth_token": code
+	}
+
+	oserv = get_oauth_service(doc)
+	data = traverse_params(doc.session_data_params, replacements=replacers)
+	
+	response = oserv.get_raw_access_token(data=data).json()
+
 	dl = frappe.get_all("APP Token User", fields=["name", "app_user_id"], filters=filters)
-	if data.has_key("parser") and data.has_key("endpoint") and all([data["parser"], data["endpoint"]]):
-		app_user_id = get_uri_parsed(service, data["endpoint"], data["parser"], user=user, code=code)
-	else:
-		app_user_id = None
 
 	if dl:
-		frappe.db.set_value("APP Token User", dl[0]["name"], "auth_token", code)
-		if app_user_id and (not dl[0].app_user_id):
-			frappe.db.set_value("APP Token User", dl[0]["name"], "app_user_id", app_user_id)
+		user_token_name = dl[0].name
+		d = frappe.get_doc("APP Token User", user_token_name)
+		d.update({
+			"auth_token": response["access_token"],
+			"expires_in": response["expires_in"],
+			"refresh_token": response["refresh_token"]
+		})
+		d.save()
 	else:
-		doc = frappe.new_doc("APP Token User")
-		doc.update({
+		d = frappe.new_doc("APP Token User")
+		d.update({
 			"parent": service,
 			"parenttype": "APP Token",
 			"parentfield": "authenticated_users",
 			"user": user,
-			"auth_token": code 
+			"auth_token": response["access_token"],
+			"expires_in": response["expires_in"],
+			"refresh_token": response["refresh_token"]
 		})
-		if app_user_id:
-			doc["app_user_id"] = app_user_id
-		doc.save()
+		d.save()
+		user_token_name = d.name
+
 	frappe.db.commit()
 
-	return {'OK': frappe._('Authorization Code Stored')}
+	if dl and (not dl[0].app_user_id) and data.has_key("parser") and data.has_key("endpoint") and all([data["parser"], data["endpoint"]]):
+		app_user_id = get_uri_parsed(service, data["endpoint"], data["parser"], user=user, code=code)
+	else:
+		app_user_id = None
+
+		if app_user_id and (not dl[0].app_user_id):
+			frappe.db.set_value("APP Token User", user_token_name, "app_user_id", app_user_id)
+			frappe.db.commit()
+
+	return {'OK': frappe._('Authorization Code Stored'), 'autorized': response}
 
 def clear_oauth_token(service, user=None):
 	if not user:
@@ -117,47 +143,61 @@ def clear_oauth_token(service, user=None):
 	dl = frappe.get_all("APP Token User", fields=["name", "auth_token"], filters=filters)
 	if not dl or dl[0].auth_token:
 		return
-	frappe.db.set_value("APP Token User", dl[0].name, "auth_token", None)
+	frappe.db.set_value("APP Token User", dl[0].name, "auth_token", "")
 	frappe.db.commit()
 
-def get_oauth_session(service, user=None, code=None):
-	if not code:
-		if not user:
-			user = frappe.get_user().name
+def refresh_oauth_token(service, user=None):
+	if not user:
+		user = frape.get_user().name
 
-		filters = [
-			["APP Token User", "parent", "=", service],
-			["APP Token User", "user", "=", user]
-		]
-
-		dl = frappe.get_all("APP Token User", fields=["auth_token", "app_user_id"], filters=filters)
-		if not dl or not dl[0].auth_token:
-			return request_oauth_code(service, user)
-		auth_token = dl[0].auth_token
-		app_user_id = dl[0].app_user_id
-	else:
-		auth_token = code
-		app_user_id = ""
-
-	replacers = {
-		"auth_token": auth_token,
-		"user": app_user_id
-	}
-
+	filters = [
+		["APP Token User", "parent", "=", service],
+		["APP Token User", "user", "=", user]
+	]
+	dl = frappe.get_all("APP Token User", fields=["name"], filters=filters)
+	if dl and dl[0].name:
+		d = frappe.get_doc("APP Token User", dl[0]["name"])
 	doc = frappe.get_doc("APP Token", service)
-	headers = traverse_params(doc.session_header_params, replacements=replacers)
-	data = traverse_params(doc.session_data_params, replacements=replacers)
+	data = {
+		'refresh_token': d.refresh_token,
+		'grant_type': 'refresh_token'
+	}
+	osrv = get_oauth_service(doc)
+	response = osrv.get_raw_access_token(data=data).json()
+	d.update({
+		"auth_token": response["access_token"],
+		"expires_in": response["expires_in"],
+		"refresh_token": response["refresh_token"]	
+	})
+	d.save()
+	frappe.db.commit()
+	return response["access_token"]
+
+def get_oauth_session(service, user=None):
+	from time import time
+
+	current = int(time())
+
+	if not user:
+		user = frappe.get_user().name
+
+	filters = [
+		["APP Token User", "parent", "=", service],
+		["APP Token User", "user", "=", user]
+	]
+
+	dl = frappe.get_all("APP Token User", fields=["auth_token", "app_user_id"], filters=filters)
+
+	if not dl or not dl[0].auth_token:
+		return request_oauth_code(service, user)
+	elif dl[0].expires_in and (dl[0].expires_in - current) <= 0:
+		auth_token = refresh_oauth_token(service, user)
+	else:
+		auth_token = dl[0].auth_token
+
+	doc = frappe.get_doc("APP Token", service)	
 	oserv = get_oauth_service(doc)
-	try:
-		session = oserv.get_auth_session(
-			headers=headers, 
-			data=data
-		)
-		return session
-	except KeyError, e:
-		if 'expired' in e.message.lower() or 'invalid' in e.message.lower():
-			clear_oauth_token(service, user)
-			request_oauth_code(service, user)
-			frappe.msgprint("The active AuthCode is {}".format('expired' if 'experied' in e.message.lower() else 'invalid'))
-		else: 
-			raise KeyError(e)
+	session = oserv.get_session(auth_token)
+
+	return session
+	

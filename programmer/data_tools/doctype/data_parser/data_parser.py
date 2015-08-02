@@ -84,6 +84,8 @@ def get_uri_parsed(app_name, uri, parser, user=None, code=None):
     parser = frappe.get_doc("Data Parser", parser)
     cast = parser.cast
     request = session.get(uri)
+    if not request:
+        raise RuntimeError("Request can't be created")
     if parser.data_format == "JSON":
         raw_data = request.json()
     elif parser.data_format == "XML":
