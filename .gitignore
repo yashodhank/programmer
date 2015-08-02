@@ -5,3 +5,4 @@
 tags
 .benchignore
 *.sublime*
+programmer/fixtures/app_token.json
