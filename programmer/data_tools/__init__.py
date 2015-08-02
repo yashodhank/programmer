@@ -1,0 +1,1 @@
+from doctype.data_parser.data_parser import get_uri_parsed

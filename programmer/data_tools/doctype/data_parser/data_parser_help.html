@@ -1,0 +1,241 @@
+<hr>
+<div style="padding: 0px 15px;">
+    <h3>{%= __("Quick Help for XPath and JSONPath") %}:</h3>
+    <p>
+        {%= __("Here is a complete overview and side by side comparison of the XPath syntax elements with its JSONPath counterparts.") %}
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>{%= __("XPath") %}</th>
+                <th>{%= __("JSONPath") %}</th>
+                <th>{%= __("Description") %}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>/</td>
+                <td>$</td>
+                <td>{%= __("The root element/object") %}</td>
+            </tr>
+            <tr>
+                <td>.</td>
+                <td>@</td>
+                <td>{%= __("The current element/object") %}</td>
+            </tr>
+            <tr>
+                <td>/</td>
+                <td>. {%= __("or") %} []</td>
+                <td>{%= __("The child operator") %}</td>
+            </tr>
+            <tr>
+                <td>..</td>
+                <td>{%= __("N/A") %}</td>
+                <td>{%= __("The parent operator") %}</td>
+            </tr>
+            <tr>
+                <td>*</td>
+                <td>*</td>
+                <td>{%= ("Wildcard. All elements/objects regardless their names.") %}</td>
+            </tr>
+            <tr>
+                <td>@</td>
+                <td>{%= __("N/A") %}</td>
+                <td>{%= __("Attribute access. JSON structures do not have") %}</td>
+            </tr>
+            <tr>
+                <td>[ ]</td>
+                <td>[ ]</td>
+                <td>
+                    {%= __("Subscript operator. XPath uses it to iterate over element collections and for predicates.") %}<br>
+                    {%= __("In JavaScript, Python and JSON it is the native array operator.") %}
+                </td>
+            </tr>
+            <tr>
+                <td>|</td>
+                <td>[,]</td>
+                <td>
+                    {%= __("Union operator in XPath results in a combination of node sets.") %}</br>
+                    {%= __("JSONPath allows alternate names or array indices as a set.") %}
+                </td>
+            </tr>
+            <tr>
+                <td>{%= __("N/A") %}</td>
+                <td>[{%= __("start") %}:{%= __("end") %}:{%= __("step") %}]</td>
+                <td>{%= __("Array slice operator") %}</td>
+            </tr>
+            <tr>
+                <td>[ ]</td>
+                <td>?( )</td>
+                <td>{%= __("Applies a filter (script) expression") %}</td>
+            </tr>
+            <tr>
+                <td>{%= __("N/A") %}</td>
+                <td>( )</td>
+                <td>{%= __("Script expression") %}</td>
+            </tr>
+            <tr>
+                <td>( )</td>
+                <td>{%= __("N/A") %}</td>
+                <td>{%= __("Grouping in XPath") %}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<hr>
+<div style="padding: 0px 15px;">
+    <h3>{% __("Examples") %}</h3>
+    <br>
+    <table>
+        <thead>
+            <tr>
+                <th>{%= __("store.xml") %}</th>
+                <th>{%= __("store.json") %}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="width: 50%;">
+                    <pre>
+&lt;store&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;book&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;category&gt;reference&lt;/category&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;author&gt;Nigel&nbsp;Ress&lt;/author&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Sayings&nbsp;of&nbsp;the&nbsp;Century&lt;/title&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;price&gt;8.95&lt;/price&gt;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/book&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;book&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;category&gt;fiction&lt;/category&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;author&gt;Evelyn&nbsp;Waugh&lt;/author&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Sword&nbsp;of&nbsp;Honour&lt;/title&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;price&gt;12.98&lt;/price&gt;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/book&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;book&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;category&gt;fiction&lt;/category&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;author&gt;Herman&nbsp;Melville&lt;/author&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Moby&nbsp;Dick&lt;/title&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;isbn&gt;0-553-21311-3&lt;/isbn&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;price&gt;8.95&lt;/price&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/book&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;book&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;category&gt;fiction&lt;/category&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;author&gt;J.&nbsp;R.&nbsp;R.&nbsp;Tolkien&lt;/author&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;The&nbsp;Lord&nbsp;of&nbsp;the&nbsp;Rings&lt;/title&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;isbn&gt;0-395-19395-8&lt;/isbn&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;price&gt;22.99&lt;/price&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/book&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;bicycle&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;color&gt;red&lt;/color&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;price&gt;19.95&lt;/price&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/bicycle&gt;<br>
+&lt;/store&gt;                   </pre>
+                </td>
+                <td style="width: 50%"><pre style="margin-left: 20px;">
+{&nbsp;"store":&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;"book":&nbsp;[<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"category":&nbsp;"reference",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"author":&nbsp;"Nigel&nbsp;Rees",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"title":&nbsp;"Sayings&nbsp;of&nbsp;the&nbsp;Century",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"price":&nbsp;8.95<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"category":&nbsp;"fiction",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"author":&nbsp;"Evelyn&nbsp;Waugh",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"title":&nbsp;"Sword&nbsp;of&nbsp;Honour",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"price":&nbsp;12.99<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"category":&nbsp;"fiction",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"author":&nbsp;"Herman&nbsp;Melville",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"title":&nbsp;"Moby&nbsp;Dick",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"isbn":&nbsp;"0-553-21311-3",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"price":&nbsp;8.99<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"category":&nbsp;"fiction",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"author":&nbsp;"J.&nbsp;R.&nbsp;R.&nbsp;Tolkien",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"title":&nbsp;"The&nbsp;Lord&nbsp;of&nbsp;the&nbsp;Rings",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"isbn":&nbsp;"0-395-19395-8",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"price":&nbsp;22.99<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;],<br>
+&nbsp;&nbsp;&nbsp;&nbsp;"bicycle":&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"color":&nbsp;"red",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"price":&nbsp;19.95<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;}<br>
+}
+                </pre></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<hr>
+<div style="padding: 0px 15px;">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>{%= __("XPath") %}</th>
+                <th>{%= __("JSONPath") %}</th>
+                <th>{%= __("Result") %}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>/store/book/author</td>
+                <td>$.store.book[*].author</td>
+                <td>{%= __("The authors of all books in the store") %}</td>
+            </tr>
+            <tr>
+                <td>//author</td>
+                <td>$..author</td>
+                <td>{%= __("All authors") %}</td>
+            </tr>
+            <tr>
+                <td>/store/*</td>
+                <td>$.store.*</td>
+                <td>{%= __("All things in store, which are some books and a red bicycle.") %}</td>
+            </tr>
+            <tr>
+                <td>/store//price</td>
+                <td>$.store..price</td>
+                <td>{%= __("The price of everything in the store.") %}</td>
+            </tr>
+            <tr>
+                <td>//book[3]</td>
+                <td>$..book[2]</td>
+                <td>{%= __("The third book") %}</td>
+            </tr>
+            <tr>
+                <td>//book[last()]</td>
+                <td>$..book[(@.length-1)]
+                    <br>
+                   $..book[-1:]</td>
+                <td>{%= __("The last book in order.") %}</td>
+            </tr>
+            <tr>
+                <td>//book[position()&lt;3]</td>
+                <td>$..book[0,1]
+                    <br>
+                   $..book[:2]</td>
+                <td>{%= __("The first two books") %}</td>
+            </tr>
+            <tr>
+                <td>//book[isbn]</td>
+                <td>$..book[?(@.isbn)]</td>
+                <td>{%= __("Filter all books with isbn number") %}</td>
+            </tr>
+            <tr>
+                <td>//book[price&lt;10]</td>
+                <td>$..book[?(@.price&lt;10)]</td>
+                <td>{%= __("Filter all books cheapier than 10") %}</td>
+            </tr>
+            <tr>
+                <td>//*</td>
+                <td>$..*</td>
+                <td>{%= __("All Elements in XML document. All members of JSON structure.") %}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
