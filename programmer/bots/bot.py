@@ -1,0 +1,253 @@
+#-*- coding: utf-8 -*-
+
+from __future__ import print_function, unicode_literals
+
+import datetime
+import json
+import re
+import time
+import traceback
+import frappe
+
+from frappe import utils
+from . import exceptions
+from .message import MessageFactory
+from .pipeline import PipelineFactory
+
+class Bot(object):
+	def __init__(self, bot_id):
+		self.log_buffer = []
+		self.parameters = Parameters()
+
+		self.current_message = None
+		self.last_message = None
+		self.message_counter = 0
+		self.error_retries_count = 0
+		self.source_pipeline = None
+		self.destination_pipeline = None
+		self.logger = None
+
+	try:
+		self.log_buffer.append(('debug', 
+			'{} initialized with id {}'.format(
+				self.__class__.__name__, bot_id
+			)))
+		self.check_bot_id(bot_id)
+		self.bot_id = bot_id
+		self.load_defaults_configuration()
+		self.load_system_configuration()
+		self.logger = frappe.get_logger('Programmer:BOT')
+	except:
+		self.log_buffer.append(('critical', traceback.format_exc()))
+		self.stop()
+
+	else:
+		for line in self.log_buffer:
+			getattr(self.logger, line[0])(line[1])
+
+	try:
+		self.logger.info('Bot is starting.')
+		self.load_runtime_configuration()
+		self.load_pipeline_configuration()
+		self.load_harmonization_configuration()
+
+		self.init()
+	except:
+		self.logger.exception('Bot initialized failed.')
+		raise
+
+	def init(self):
+		pass
+
+	def start(self, starting=True, error_on_pipeline=True, 
+		error_on_message=True, source_pipeline=None, destination_pipeline=None):
+
+		self.source_pipeline = source_pipeline
+		self.destination_pipeline = destination_pipeline
+		self.logger.info('Bot starts processing')
+
+		while True:
+			try:
+				if not starting and (error_on_pipeline or error_on_message):
+					self.logger.info('Bot will restart in {} seconds.'.format(self.parameters.error_retry_delay))
+					time.sleep(self.parameters.error_retry_delay)
+					self.logger.info('Bot woke up.')
+					self.logger.info('Trying to start processing again.')
+
+				if error_on_message:
+					error_on_message = False
+
+				if error_on_pipeline:
+					self.logger.info('Loading source pipeline.')
+					self.source_pipeline = PipelineFactory.create(self.parameters)
+					self.logger.info('Loading source queue.')
+					self.source_pipeline.set_queues(self.source_queues, 'source')
+					self.logger.info('Source queue loaded {}.'.format(self.source_queues))
+					self.source_pipeline.connect()
+					self.logger.info('Connect to source queue.')
+					
+					self.logger.info('Loading destination pipeline.')
+					self.destination_pipeline = PipelineFactory(self.parameters)
+					self.logger.info('Loading destination queues.')
+					self.destination_pipeline.set_queues(self.destination_queues, 'destination')
+					self.logger.info('Destination queues loaded {}'.format(self.destination_queues))
+					self.destination_pipeline.connect()
+					self.logger.info('Connect to destination queues.')
+
+					self.logger.info('Pipeline ready.')
+					error_on_pipeline = False
+				
+				if starting:
+					self.logger.info('Start processing.')
+					starting = False
+
+				self.process()
+				self.source_pipeline.sleep(self.parameters.rate_limit)
+
+			except exceptions.PipelineError:
+				error_on_pipeline = True
+				if self.parameters.error_log_exception:
+					self.logger.exception('Pipeline failed.')
+				else:
+					self.logger.error('Pipeline failed.')
+				self.source_pipeline = None
+				self.destination_pipeline = None
+			except KeyboardInterrupt:
+				self.logger.error('Received KeyboardInterrupt.')
+				self.stop()
+				break
+			except Exception:
+				if self.parameters.error_log_exception:
+					self.logger.exception('Bot has found a problem.')
+				else:
+					self.logger.error('Bot has found a problem.')
+
+				if self.parameters.error_log_message:
+					self.logger.info('Last Correct Message(event): {!r}.'.format(self.last_message[:500]))
+					self.logger.info('Current Message(event): {!r}.'.format(self.current_message[:500]))
+
+				self.error_retries_count += 1
+				if self.parameters.error_procedure == 'Retry':
+					if (self.error_retries_counter >= self.parameters.error_max_retries):
+						if self.parameters.error_dump_message:
+							self.dump_message()
+						self.acknowledge_message()
+						self.stop()
+
+					# when bot acknowledge the message, dont need to wait again
+					error_on_message = True
+				else:
+					if self.parameters.error_dump_message:
+						self.dump_message()
+					self.acknowledge_message()
+
+			finally:
+				if (self.error_retries_count >= self.parameters.error_max_retries
+					and self.parameters.error_max_retries >= 0):
+					self.stop()
+					break
+
+	def stop(self):
+		'''
+		Stop Bot by diconnecting pipelines
+		'''
+
+		if self.source_pipeline:
+			self.source_pipeline.disconnect()
+			self.source_pipeline = None
+			self.logger.info('Disconnecting from source pipeline.')
+		
+		if self.destination_pipeline:
+			self.destination_pipeline.disconnect()
+			self.destination_pipeline = None
+			self.logger.info('Disconnecting from destination pipeline.')
+
+		if self.logger:
+			self.logger.info('Bot stopped.')
+		else:
+			self.logger_buffer.append(('info', 'Bot stopped.'))
+			self.print_log_buffer()
+		if self.parameters.exit_on_stop:
+			self.terminate()
+
+	def terminate(self):
+		try:
+			self.logger.error('Exiting.')
+		except:
+			pass
+		finally:
+			print('Exiting.')
+		exit(-1)
+
+	def print_log_buffer(self):
+		for level, message in self.log_buffer:
+			if self.logger:
+				getattr(self.logger, level)(message)
+			print(level.upper(), '-', message)
+		self.log_buffer = []
+
+	def check_bot_id(self, bot_id):
+		res = re.search('[^0-9a-zA-Z-]+', bot_id)
+		if res:
+			self.log_buffer.append(('error', 'Invalid bot id, must match "[^0-9a-zA-Z-]+".'))
+			self.stop()
+
+	def send_message(self, message):
+		if not message:
+			self.log.warning('Sending message: Empty message found.')
+			return False
+
+		self.logger.debug('Sending message.')
+		self.message_counter += 1
+		if self.message_counter % 500 == 0:
+			self.logger.info('Processed {} messages.'%self.message_counter)
+
+		raw_message = MessageFactory.serialize(message)
+		self.destination_pipeline.send(raw_message)
+
+	def receive_message(self):
+		self.logger.debug('Receiving Message.')
+		message = self.source_pipeline.receive()
+
+		self.logger.debug('Receive message {!r}...'.format(message[:500]))
+		if not message:
+			self.logger.warning('Empty message received.')
+			return None
+
+		self.current_message = MessageFactory.unserialize(message)
+		return self.current_message
+
+	def acknowledge_message(self):
+		self.last_message = self.current_message
+		self.source_pipeline.acknowledge()
+
+	def dump_message(self):
+		timestamp = datetime.datetime.utcnow()
+		timestamp = timestamp.isoformat()
+
+		dump_file = '{}{}.dump'.format(self.parameters.logging_path, self.bot_id)
+
+		new_dump_data = dict()
+		new_dump_data[timestamp] = dict(
+			boot_id=self.boot_id,
+			source_queue=self.source_queues,
+			traceback=traceback.format_exc(),
+			message=self.current_message.serialize() if self.current_message is not None else None
+		)
+
+		try:
+			with open(dump_file, 'r') as fp:
+				dump_data = json.load(fp)
+				dump_data.update(new_dump_data)
+		except:
+			dump_data = new_dump_data
+
+		with open(dump_file, 'w') as fp:
+			json.dump(dump_data, fp, indent=4, sort_keys=True)
+
+	def load_defaults_configuration(self):
+		pass
+
+
+class Parameters(frappe._dict):
+	pass

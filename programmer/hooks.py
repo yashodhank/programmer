@@ -5,7 +5,7 @@ app_name = "programmer"
 app_title = "programmer"
 app_publisher = "MaxMorais"
 app_description = "ERPNext Projects for ERPNext programmers"
-app_icon = "octicon octicon-rocket"
+app_icon = "octicon octicon-octoface"
 app_color = "grey"
 app_email = "max.morais.dmm@gmail.com"
 app_version = "0.0.1"
@@ -16,8 +16,8 @@ required_apps = [
 ]
 
 fixtures = [
-    "Data Parser",
-    "APP Token"
+    "API",
+    "API Template"
 ]
     
 # Includes in <head>

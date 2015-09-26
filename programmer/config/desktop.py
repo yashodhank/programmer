@@ -6,7 +6,7 @@ def get_data():
 	return {
 		"programmer": {
 			"color": "grey",
-			"icon": "octicon octicon-rocket",
+			"icon": "octicon octicon-octoface",
 			"type": "module",
 			"label": _("programmer")
 		}
