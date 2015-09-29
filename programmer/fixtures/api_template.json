@@ -1,0 +1,202 @@
+[
+ {
+  "api_auth_method": "oAuth2", 
+  "api_type": "Rest", 
+  "docstatus": 0, 
+  "doctype": "API Template", 
+  "modified": "2015-09-06 01:54:05.855979", 
+  "name": "Rest - oAuth2", 
+  "parameters": [
+   {
+    "allowed_values": null, 
+    "ctx": "Class", 
+    "dflt": "SIGNATURE_HMAC", 
+    "link": 0, 
+    "linked_with": null, 
+    "numeric": 0, 
+    "parameter": "signature_method", 
+    "reqd": 1
+   }, 
+   {
+    "allowed_values": null, 
+    "ctx": "Class", 
+    "dflt": "SIGNATURE_TYPE_AUTH_READER", 
+    "link": 0, 
+    "linked_with": null, 
+    "numeric": 0, 
+    "parameter": "signature_type", 
+    "reqd": 1
+   }, 
+   {
+    "allowed_values": null, 
+    "ctx": "Class", 
+    "dflt": "BEARER", 
+    "link": 0, 
+    "linked_with": null, 
+    "numeric": 0, 
+    "parameter": "token_type", 
+    "reqd": 1
+   }, 
+   {
+    "allowed_values": null, 
+    "ctx": "Class", 
+    "dflt": "BEARER_HEADER", 
+    "link": 0, 
+    "linked_with": null, 
+    "numeric": 0, 
+    "parameter": "bearer_type", 
+    "reqd": 1
+   }, 
+   {
+    "allowed_values": null, 
+    "ctx": "Class", 
+    "dflt": "", 
+    "link": 0, 
+    "linked_with": null, 
+    "numeric": 0, 
+    "parameter": "authorize_url", 
+    "reqd": 1
+   }, 
+   {
+    "allowed_values": null, 
+    "ctx": "Class", 
+    "dflt": null, 
+    "link": 0, 
+    "linked_with": null, 
+    "numeric": 0, 
+    "parameter": "access_token_url", 
+    "reqd": 1
+   }, 
+   {
+    "allowed_values": null, 
+    "ctx": "Class", 
+    "dflt": null, 
+    "link": 0, 
+    "linked_with": null, 
+    "numeric": 0, 
+    "parameter": "client_id", 
+    "reqd": 1
+   }, 
+   {
+    "allowed_values": null, 
+    "ctx": "Class", 
+    "dflt": null, 
+    "link": 0, 
+    "linked_with": null, 
+    "numeric": 0, 
+    "parameter": "client_secret", 
+    "reqd": 1
+   }
+  ]
+ }, 
+ {
+  "api_auth_method": "oAuth1", 
+  "api_type": "Rest", 
+  "docstatus": 0, 
+  "doctype": "API Template", 
+  "modified": "2015-09-06 01:47:16.426994", 
+  "name": "Rest - oAuth1", 
+  "parameters": [
+   {
+    "allowed_values": null, 
+    "ctx": "Class", 
+    "dflt": "SIGNATURE_HMAC", 
+    "link": 0, 
+    "linked_with": null, 
+    "numeric": 0, 
+    "parameter": "signature_method", 
+    "reqd": 1
+   }, 
+   {
+    "allowed_values": null, 
+    "ctx": "Class", 
+    "dflt": "SIGNATURE_TYPE_AUTH_READER", 
+    "link": 0, 
+    "linked_with": null, 
+    "numeric": 0, 
+    "parameter": "signature_type", 
+    "reqd": 1
+   }, 
+   {
+    "allowed_values": null, 
+    "ctx": "Class", 
+    "dflt": "BEARER", 
+    "link": 0, 
+    "linked_with": null, 
+    "numeric": 0, 
+    "parameter": "token_type", 
+    "reqd": 1
+   }, 
+   {
+    "allowed_values": null, 
+    "ctx": "Class", 
+    "dflt": "BEARER_HEADER", 
+    "link": 0, 
+    "linked_with": null, 
+    "numeric": 0, 
+    "parameter": "bearer_type", 
+    "reqd": 1
+   }, 
+   {
+    "allowed_values": null, 
+    "ctx": "Class", 
+    "dflt": null, 
+    "link": 0, 
+    "linked_with": null, 
+    "numeric": 0, 
+    "parameter": "request_token_url", 
+    "reqd": 1
+   }, 
+   {
+    "allowed_values": null, 
+    "ctx": "Class", 
+    "dflt": "", 
+    "link": 0, 
+    "linked_with": null, 
+    "numeric": 0, 
+    "parameter": "authorize_url", 
+    "reqd": 1
+   }, 
+   {
+    "allowed_values": null, 
+    "ctx": "Class", 
+    "dflt": null, 
+    "link": 0, 
+    "linked_with": null, 
+    "numeric": 0, 
+    "parameter": "access_token_url", 
+    "reqd": 1
+   }, 
+   {
+    "allowed_values": null, 
+    "ctx": "Class", 
+    "dflt": null, 
+    "link": 0, 
+    "linked_with": null, 
+    "numeric": 0, 
+    "parameter": "client_id", 
+    "reqd": 1
+   }, 
+   {
+    "allowed_values": null, 
+    "ctx": "Class", 
+    "dflt": null, 
+    "link": 0, 
+    "linked_with": null, 
+    "numeric": 0, 
+    "parameter": "client_secret", 
+    "reqd": 1
+   }, 
+   {
+    "allowed_values": "0\n1", 
+    "ctx": "Class", 
+    "dflt": "1", 
+    "link": 0, 
+    "linked_with": null, 
+    "numeric": 0, 
+    "parameter": "returns_token", 
+    "reqd": 1
+   }
+  ]
+ }
+]

@@ -1,0 +1,4774 @@
+[
+ {
+  "active": 0, 
+  "api_auth_method": "oAuth2", 
+  "api_domain": "api.angel.co", 
+  "api_name": "Angel List", 
+  "api_type": "Rest", 
+  "docstatus": 0, 
+  "doctype": "API", 
+  "https": 1, 
+  "keys": [], 
+  "methods": [], 
+  "modified": "2015-09-05 23:40:41.565308", 
+  "name": "Angel List - Rest - oAuth2", 
+  "parameters": [
+   {
+    "ctx": "Class", 
+    "parameter": "signature_method", 
+    "value": "SIGNATURE_HMAC"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "signature_type", 
+    "value": "SIGNATURE_TYPE_AUTH_READER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "token_type", 
+    "value": "BEARER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "bearer_type", 
+    "value": "BEARER_HEADER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "authorize_url", 
+    "value": "angel.co/api/oauth/authorize"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "access_token_url", 
+    "value": "angel.co/api/oauth/token"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_id", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_secret", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "redirect_uri", 
+    "value": "http://localhost:8000api/method/programmer.authorize"
+   }
+  ], 
+  "permissions": [
+   {
+    "description": "Follow items and update your status", 
+    "parameter": "None"
+   }, 
+   {
+    "description": "Access your email address", 
+    "parameter": "email"
+   }, 
+   {
+    "description": "read and send private messages", 
+    "parameter": "message"
+   }
+  ], 
+  "provider_url": "angel.co", 
+  "resources": []
+ }, 
+ {
+  "active": 0, 
+  "api_auth_method": "oAuth2", 
+  "api_domain": "api.assembla.com", 
+  "api_name": "Assembla", 
+  "api_type": "Rest", 
+  "docstatus": 0, 
+  "doctype": "API", 
+  "https": 1, 
+  "keys": [], 
+  "methods": [], 
+  "modified": "2015-09-06 00:45:36.343325", 
+  "name": "Assembla - Rest - oAuth2", 
+  "parameters": [
+   {
+    "ctx": "Class", 
+    "parameter": "signature_method", 
+    "value": "SIGNATURE_HMAC"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "signature_type", 
+    "value": "SIGNATURE_TYPE_AUTH_READER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "token_type", 
+    "value": "BEARER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "bearer_type", 
+    "value": "BEARER_HEADER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "authorize_url", 
+    "value": "https://api.assembla.com/authorization"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "access_token_url", 
+    "value": "https://api.assembla.com/token"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_id", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_secret", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "redirect_uri", 
+    "value": "http://localhost:8000api/method/programmer.authorize"
+   }
+  ], 
+  "permissions": [
+   {
+    "description": "Read, write and manage your projects", 
+    "parameter": "None"
+   }
+  ], 
+  "provider_url": "www.assembla.com", 
+  "resources": []
+ }, 
+ {
+  "active": 0, 
+  "api_auth_method": "oAuth2", 
+  "api_domain": "api.behance.net", 
+  "api_name": "Behance", 
+  "api_type": "Rest", 
+  "docstatus": 0, 
+  "doctype": "API", 
+  "https": 1, 
+  "keys": [], 
+  "methods": [], 
+  "modified": "2015-09-06 01:04:59.166877", 
+  "name": "Behance - Rest - oAuth2", 
+  "parameters": [
+   {
+    "ctx": "Class", 
+    "parameter": "signature_method", 
+    "value": "SIGNATURE_HMAC"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "signature_type", 
+    "value": "SIGNATURE_TYPE_AUTH_READER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "token_type", 
+    "value": "BEARER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "bearer_type", 
+    "value": "BEARER_URI"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "scopes_separator", 
+    "value": "|"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "authorize_url", 
+    "value": "www.behance.net/v2/oauth/authenticate"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "access_token_url", 
+    "value": "www.behance.net/v2/oauth/token"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_id", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_secret", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "redirect_uri", 
+    "value": "http://localhost:8000api/method/programmer.authorize"
+   }
+  ], 
+  "permissions": [
+   {
+    "description": "Read your activity feed", 
+    "parameter": "activity_feed"
+   }, 
+   {
+    "description": "Read your public and private projects", 
+    "parameter": "project_read"
+   }, 
+   {
+    "description": "Read your private collections", 
+    "parameter": "collection_read"
+   }, 
+   {
+    "description": "Write to your private collections", 
+    "parameter": "collection_write"
+   }, 
+   {
+    "description": "Read your invitations", 
+    "parameter": "invitations_read"
+   }, 
+   {
+    "description": "Respond to your invitations", 
+    "parameter": "invitations_write"
+   }, 
+   {
+    "description": "Read your works in progress", 
+    "parameter": "wip_read"
+   }, 
+   {
+    "description": "Write to your works in progress", 
+    "parameter": "wip_write"
+   }
+  ], 
+  "provider_url": "www.behance.net", 
+  "resources": []
+ }, 
+ {
+  "active": 0, 
+  "api_auth_method": "oAuth1", 
+  "api_domain": "api.bitbucket.org", 
+  "api_name": "Bitbucket", 
+  "api_type": "Rest", 
+  "docstatus": 0, 
+  "doctype": "API", 
+  "https": 1, 
+  "keys": [], 
+  "methods": [], 
+  "modified": "2015-09-05 23:45:54.446201", 
+  "name": "Bitbucket - Rest - oAuth1", 
+  "parameters": [
+   {
+    "ctx": "Class", 
+    "parameter": "signature_method", 
+    "value": "SIGNATURE_HMAC"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "signature_type", 
+    "value": "SIGNATURE_TYPE_AUTH_READER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "token_type", 
+    "value": "BEARER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "bearer_type", 
+    "value": "BEARER_HEADER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "request_token_url", 
+    "value": "bitbucket.org/api/1.0/oauth/request_token/"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "authorize_url", 
+    "value": "bitbucket.org/api/1.0/oauth/authenticate/"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "access_token_url", 
+    "value": "bitbucket.org/api/1.0/oauth/access_token/"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_id", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_secret", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "returns_token", 
+    "value": "1"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "redirect_uri", 
+    "value": "http://localhost:8000api/method/programmer.authorize"
+   }
+  ], 
+  "permissions": [
+   {
+    "description": "Read and write your code and issues", 
+    "parameter": "None"
+   }
+  ], 
+  "provider_url": "bitbucket.org", 
+  "resources": []
+ }, 
+ {
+  "active": 0, 
+  "api_auth_method": "oAuth2", 
+  "api_domain": "api-ssl.bitly.com", 
+  "api_name": "Bitly", 
+  "api_type": "Rest", 
+  "docstatus": 0, 
+  "doctype": "API", 
+  "https": 1, 
+  "keys": [], 
+  "methods": [], 
+  "modified": "2015-09-06 00:46:10.592115", 
+  "name": "Bitly - Rest - oAuth2", 
+  "parameters": [
+   {
+    "ctx": "Class", 
+    "parameter": "signature_method", 
+    "value": "SIGNATURE_HMAC"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "signature_type", 
+    "value": "SIGNATURE_TYPE_AUTH_READER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "token_type", 
+    "value": "BEARER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "bearer_type", 
+    "value": "BEARER_URI"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "authorize_url", 
+    "value": "bitly.com/oauth/authorize"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "access_token_url", 
+    "value": "api-ssl.bitly.com/oauth/access_token"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_id", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_secret", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "redirect_uri", 
+    "value": "http://localhost:8000api/method/programmer.authorize"
+   }
+  ], 
+  "permissions": [
+   {
+    "description": "Read and write to your shortned URLs", 
+    "parameter": "None"
+   }
+  ], 
+  "provider_url": "bitly.com", 
+  "resources": []
+ }, 
+ {
+  "active": 0, 
+  "api_auth_method": "oAuth2", 
+  "api_domain": "api.cheddarapp.com", 
+  "api_name": "Cheddar", 
+  "api_type": "Rest", 
+  "docstatus": 0, 
+  "doctype": "API", 
+  "https": 1, 
+  "keys": [], 
+  "methods": [], 
+  "modified": "2015-09-06 00:46:18.250213", 
+  "name": "Cheddar - Rest - oAuth2", 
+  "parameters": [
+   {
+    "ctx": "Class", 
+    "parameter": "signature_method", 
+    "value": "SIGNATURE_HMAC"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "signature_type", 
+    "value": "SIGNATURE_TYPE_AUTH_READER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "token_type", 
+    "value": "BEARER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "bearer_type", 
+    "value": "BEARER_HEADER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "authorize_url", 
+    "value": "api.cheddarapp.com/oauth/authorize"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "access_token_url", 
+    "value": "api.cheddarapp.com/oauth/token"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_id", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_secret", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "redirect_uri", 
+    "value": "http://localhost:8000api/method/programmer.authorize"
+   }
+  ], 
+  "permissions": [
+   {
+    "description": "Read and Write to your tasks", 
+    "parameter": "None"
+   }
+  ], 
+  "provider_url": "cheddarapp.com", 
+  "resources": []
+ }, 
+ {
+  "active": 0, 
+  "api_auth_method": "oAuth2", 
+  "api_domain": "api.coinbase.com", 
+  "api_name": "Coinbase", 
+  "api_type": "Rest", 
+  "docstatus": 0, 
+  "doctype": "API", 
+  "https": 1, 
+  "keys": [], 
+  "methods": [], 
+  "modified": "2015-09-06 00:46:24.834362", 
+  "name": "Coinbase - Rest - oAuth2", 
+  "parameters": [
+   {
+    "ctx": "Class", 
+    "parameter": "signature_method", 
+    "value": "SIGNATURE_HMAC"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "signature_type", 
+    "value": "SIGNATURE_TYPE_AUTH_READER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "token_type", 
+    "value": "BEARER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "bearer_type", 
+    "value": "BEARER_HEADER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "authorize_url", 
+    "value": "coinbase.com/oauth/authorize"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "access_token_url", 
+    "value": "coinbase.com/oauth/token"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_id", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_secret", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "redirect_uri", 
+    "value": "http://localhost:8000api/method/programmer.authorize"
+   }
+  ], 
+  "permissions": [
+   {
+    "description": "View your basic account information", 
+    "parameter": "None"
+   }, 
+   {
+    "description": "Create payment buttons and forms, view your basic user information, edit your merchant settings, and generate new receive addresses", 
+    "parameter": "merchant"
+   }, 
+   {
+    "description": "View your balance", 
+    "parameter": "balance"
+   }, 
+   {
+    "description": "View receive addresses and create new ones", 
+    "parameter": "addresses"
+   }, 
+   {
+    "description": "Create payment buttons", 
+    "parameter": "buttons"
+   }, 
+   {
+    "description": "Buy bitcoin", 
+    "parameter": "buy"
+   }, 
+   {
+    "description": "List emails and bitcoin addresses in your contact list", 
+    "parameter": "contacts"
+   }, 
+   {
+    "description": "List merchant orders received", 
+    "parameter": "orders"
+   }, 
+   {
+    "description": "Sell bitcoin", 
+    "parameter": "sell"
+   }, 
+   {
+    "description": "View your transaction history", 
+    "parameter": "transactions"
+   }, 
+   {
+    "description": "Debit an unlimited amount of money from your account", 
+    "parameter": "send"
+   }, 
+   {
+    "description": "Request money from your account", 
+    "parameter": "request"
+   }, 
+   {
+    "description": "List bitcoin buy and sell history", 
+    "parameter": "transfers"
+   }, 
+   {
+    "description": "List your recurring payments", 
+    "parameter": "recurring payments"
+   }, 
+   {
+    "description": "List the other apps you've authorized", 
+    "parameter": "oauth_apps"
+   }, 
+   {
+    "description": "All of the above", 
+    "parameter": "all"
+   }
+  ], 
+  "provider_url": "coinbase.com", 
+  "resources": []
+ }, 
+ {
+  "active": 0, 
+  "api_auth_method": "oAuth2", 
+  "api_domain": "api.dailymile.com", 
+  "api_name": "Dailymile", 
+  "api_type": "Rest", 
+  "docstatus": 0, 
+  "doctype": "API", 
+  "https": 1, 
+  "keys": [], 
+  "methods": [], 
+  "modified": "2015-09-06 00:46:31.780827", 
+  "name": "Dailymile - Rest - oAuth2", 
+  "parameters": [
+   {
+    "ctx": "Class", 
+    "parameter": "signature_method", 
+    "value": "SIGNATURE_HMAC"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "signature_type", 
+    "value": "SIGNATURE_TYPE_AUTH_READER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "token_type", 
+    "value": "BEARER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "bearer_type", 
+    "value": "BEARER_HEADER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "authorize_url", 
+    "value": "api.dailymile.com/oauth/authorize"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "access_token_url", 
+    "value": "api.dailymile.com/oauth/token"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_id", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_secret", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "redirect_uri", 
+    "value": "http://localhost:8000api/method/programmer.authorize"
+   }
+  ], 
+  "permissions": [
+   {
+    "description": "Read and write to your workout data", 
+    "parameter": "None"
+   }
+  ], 
+  "provider_url": "dailymile.com", 
+  "resources": []
+ }, 
+ {
+  "active": 0, 
+  "api_auth_method": "oAuth2", 
+  "api_domain": "api.dailymotion.com", 
+  "api_name": "Dailymotion", 
+  "api_type": "Rest", 
+  "docstatus": 0, 
+  "doctype": "API", 
+  "https": 1, 
+  "keys": [], 
+  "methods": [], 
+  "modified": "2015-09-06 00:41:55.616297", 
+  "name": "Dailymotion - Rest - oAuth2", 
+  "parameters": [
+   {
+    "ctx": "Class", 
+    "parameter": "signature_method", 
+    "value": "SIGNATURE_HMAC"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "signature_type", 
+    "value": "SIGNATURE_TYPE_AUTH_READER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "token_type", 
+    "value": "BEARER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "bearer_type", 
+    "value": "BEARER_HEADER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "authorize_url", 
+    "value": "api.dailymotion.com/oauth/authorize"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "access_token_url", 
+    "value": "api.dailymotion.com/oauth/token"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_id", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_secret", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "redirect_uri", 
+    "value": "http://localhost:8000api/method/programmer.authorize"
+   }
+  ], 
+  "permissions": [
+   {
+    "description": "Access your personal assets", 
+    "parameter": "None"
+   }, 
+   {
+    "description": "Access your email", 
+    "parameter": "email"
+   }, 
+   {
+    "description": "Access and edit your personal information", 
+    "parameter": "userinfo"
+   }, 
+   {
+    "description": "Publish, modify and delete your videos", 
+    "parameter": "manage_videos"
+   }, 
+   {
+    "description": "Publish comments on videos", 
+    "parameter": "manage_comments"
+   }, 
+   {
+    "description": "Create, edit and delete your playlists", 
+    "parameter": "manage_playlists"
+   }, 
+   {
+    "description": "Read and write your saved tiles", 
+    "parameter": "manage_tiles"
+   }, 
+   {
+    "description": "Manage your subscriptions", 
+    "parameter": "manage_subscriptions"
+   }, 
+   {
+    "description": "Manage your list of friends", 
+    "parameter": "manage_friends"
+   }, 
+   {
+    "description": "Manage your list of favorites videos", 
+    "parameter": "manage_favorites"
+   }, 
+   {
+    "description": "Manage your groups", 
+    "parameter": "manage_groups"
+   }
+  ], 
+  "provider_url": "www.dailymotion.com", 
+  "resources": []
+ }, 
+ {
+  "active": 0, 
+  "api_auth_method": "oAuth2", 
+  "api_domain": "www.deviantart.com", 
+  "api_name": "Deviant Art", 
+  "api_type": "Rest", 
+  "docstatus": 0, 
+  "doctype": "API", 
+  "https": 1, 
+  "keys": [], 
+  "methods": [], 
+  "modified": "2015-09-06 00:48:44.931490", 
+  "name": "Deviant Art - Rest - oAuth2", 
+  "parameters": [
+   {
+    "ctx": "Class", 
+    "parameter": "signature_method", 
+    "value": "SIGNATURE_HMAC"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "signature_type", 
+    "value": "SIGNATURE_TYPE_AUTH_READER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "token_type", 
+    "value": "BEARER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "bearer_type", 
+    "value": "BEARER_HEADER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "authorize_url", 
+    "value": "www.deviantart.com/oauth2/draft15/authorize"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "access_token_url", 
+    "value": "www.deviantart.com/oauth2/draft15/token"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_id", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_secret", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "redirect_uri", 
+    "value": "http://localhost:8000api/method/programmer.authorize"
+   }
+  ], 
+  "permissions": [], 
+  "provider_url": "deviantart.com", 
+  "resources": []
+ }, 
+ {
+  "active": 0, 
+  "api_auth_method": "oAuth2", 
+  "api_domain": "discus.com", 
+  "api_name": "Disqus", 
+  "api_type": "Rest", 
+  "docstatus": 0, 
+  "doctype": "API", 
+  "https": 1, 
+  "keys": [], 
+  "methods": [], 
+  "modified": "2015-09-06 00:51:03.264239", 
+  "name": "Disqus - Rest - oAuth2", 
+  "parameters": [
+   {
+    "ctx": "Class", 
+    "parameter": "signature_method", 
+    "value": "SIGNATURE_HMAC"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "signature_type", 
+    "value": "SIGNATURE_TYPE_AUTH_READER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "token_type", 
+    "value": "BEARER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "bearer_type", 
+    "value": "BEARER_HEADER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "authorize_url", 
+    "value": "disqus.com/api/oauth/2.0/authorize/"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "access_token_url", 
+    "value": "disqus.com/api/oauth/2.0/access_token/"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_id", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_secret", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "redirect_uri", 
+    "value": "http://localhost:8000api/method/programmer.authorize"
+   }
+  ], 
+  "permissions": [
+   {
+    "description": "Access your contact info", 
+    "parameter": "None"
+   }, 
+   {
+    "description": "Access your contact info and add comments", 
+    "parameter": "write"
+   }, 
+   {
+    "description": "Access your contact info, add comments and moderate your forums", 
+    "parameter": "admin"
+   }
+  ], 
+  "provider_url": "discus.com", 
+  "resources": []
+ }, 
+ {
+  "active": 0, 
+  "api_auth_method": "oAuth1", 
+  "api_domain": "api.dropbox.com", 
+  "api_name": "Dropbox", 
+  "api_type": "Rest", 
+  "docstatus": 0, 
+  "doctype": "API", 
+  "https": 1, 
+  "keys": [], 
+  "methods": [], 
+  "modified": "2015-09-06 06:17:26.756252", 
+  "name": "Dropbox - Rest - oAuth1", 
+  "parameters": [
+   {
+    "ctx": "Class", 
+    "parameter": "signature_method", 
+    "value": "SIGNATURE_HMAC"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "signature_type", 
+    "value": "SIGNATURE_TYPE_AUTH_READER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "token_type", 
+    "value": "BEARER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "bearer_type", 
+    "value": "BEARER_HEADER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "request_token_url", 
+    "value": "api.dropbox.com/1/oauth/request_token"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "authorize_url", 
+    "value": "www.dropbox.com/1/oauth/authorize"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "access_token_url", 
+    "value": "api.dropbox.com/1/oauth/access_token"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_id", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_secret", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "returns_token", 
+    "value": "1"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "redirect_uri", 
+    "value": "http://localhost:8000api/method/programmer.authorize"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "favicon_url", 
+    "value": "https://cf.dropboxstatic.com/static/images/favicon-vflk5FiAC.ico"
+   }
+  ], 
+  "permissions": [
+   {
+    "description": "Read and write to your entire Dropbox", 
+    "parameter": "None"
+   }
+  ], 
+  "provider_url": "www.dropbox.com", 
+  "resources": []
+ }, 
+ {
+  "active": 0, 
+  "api_auth_method": "oAuth2", 
+  "api_domain": "www.dwolla.com", 
+  "api_name": "Dwolla", 
+  "api_type": "Rest", 
+  "docstatus": 0, 
+  "doctype": "API", 
+  "https": 1, 
+  "keys": [], 
+  "methods": [], 
+  "modified": "2015-09-06 00:58:48.309238", 
+  "name": "Dwolla - Rest - oAuth2", 
+  "parameters": [
+   {
+    "ctx": "Class", 
+    "parameter": "signature_method", 
+    "value": "SIGNATURE_HMAC"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "signature_type", 
+    "value": "SIGNATURE_TYPE_AUTH_READER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "token_type", 
+    "value": "BEARER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "bearer_type", 
+    "value": "BEARER_HEADER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "authorize_url", 
+    "value": "www.dwolla.com/oauth/v2/authenticate"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "access_token_url", 
+    "value": "www.dwolla.com/oauth/v2/token"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_id", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_secret", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "redirect_uri", 
+    "value": "http://localhost:8000api/method/programmer.authorize"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "disclaimer", 
+    "value": "This application is not directly supported by Dwolla Corp.\\nDwolla Corp. makes no claims about this application.\\nThis application is not endorsed or certified by Dwolla Corp."
+   }
+  ], 
+  "permissions": [
+   {
+    "description": "Access your account details", 
+    "parameter": "None"
+   }, 
+   {
+    "description": "Read your contacts", 
+    "parameter": "Contacts"
+   }, 
+   {
+    "description": "Read your transaction history", 
+    "parameter": "Transactions"
+   }, 
+   {
+    "description": "Read your current balance", 
+    "parameter": "Balance"
+   }, 
+   {
+    "description": "Send money to others", 
+    "parameter": "Send"
+   }, 
+   {
+    "description": "Request money from others", 
+    "parameter": "Request"
+   }, 
+   {
+    "description": "View your bank account and other funding sources", 
+    "parameter": "Funding"
+   }
+  ], 
+  "provider_url": "dwolla.com", 
+  "resources": []
+ }, 
+ {
+  "active": 0, 
+  "api_auth_method": "oAuth2", 
+  "api_domain": "api.elance.com", 
+  "api_name": "Elance", 
+  "api_type": "Rest", 
+  "docstatus": 0, 
+  "doctype": "API", 
+  "https": 1, 
+  "keys": [], 
+  "methods": [], 
+  "modified": "2015-09-06 01:01:17.190768", 
+  "name": "Elance - Rest - oAuth2", 
+  "parameters": [
+   {
+    "ctx": "Class", 
+    "parameter": "signature_method", 
+    "value": "SIGNATURE_HMAC"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "signature_type", 
+    "value": "SIGNATURE_TYPE_AUTH_READER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "token_type", 
+    "value": "BEARER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "bearer_type", 
+    "value": "BEARER_HEADER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "authorize_url", 
+    "value": "api.elance.com/api2/oauth/authorize"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "access_token_url", 
+    "value": "api.elance.com/api2/oauth/token"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_id", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_secret", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "redirect_uri", 
+    "value": "http://localhost:8000api/method/programmer.authorize"
+   }
+  ], 
+  "permissions": [
+   {
+    "description": "Access and manage your Elance account", 
+    "parameter": "None"
+   }
+  ], 
+  "provider_url": "www.elance.com", 
+  "resources": []
+ }, 
+ {
+  "active": 0, 
+  "api_auth_method": "oAuth2", 
+  "api_domain": "www.eventbrite.com", 
+  "api_name": "Eventbrite", 
+  "api_type": "Rest", 
+  "docstatus": 0, 
+  "doctype": "API", 
+  "https": 1, 
+  "keys": [], 
+  "methods": [], 
+  "modified": "2015-09-06 01:03:12.926288", 
+  "name": "Eventbrite - Rest - oAuth2", 
+  "parameters": [
+   {
+    "ctx": "Class", 
+    "parameter": "signature_method", 
+    "value": "SIGNATURE_HMAC"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "signature_type", 
+    "value": "SIGNATURE_TYPE_AUTH_READER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "token_type", 
+    "value": "BEARER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "bearer_type", 
+    "value": "BEARER_HEADER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "authorize_url", 
+    "value": ""
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "access_token_url", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_id", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_secret", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "redirect_uri", 
+    "value": "http://localhost:8000api/method/programmer.authorize"
+   }
+  ], 
+  "permissions": [
+   {
+    "description": "Read and write to your check-ins", 
+    "parameter": "None"
+   }
+  ], 
+  "provider_url": "www.eventbrite.com", 
+  "resources": []
+ }, 
+ {
+  "active": 0, 
+  "api_auth_method": "oAuth2", 
+  "api_domain": "graph.facebook.com", 
+  "api_name": "Facebook", 
+  "api_type": "Rest", 
+  "docstatus": 0, 
+  "doctype": "API", 
+  "https": 1, 
+  "keys": [], 
+  "methods": [], 
+  "modified": "2015-09-06 06:35:36.869363", 
+  "name": "Facebook - Rest - oAuth2", 
+  "parameters": [
+   {
+    "ctx": "Class", 
+    "parameter": "signature_method", 
+    "value": "SIGNATURE_HMAC"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "signature_type", 
+    "value": "SIGNATURE_TYPE_AUTH_READER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "token_type", 
+    "value": "BEARER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "bearer_type", 
+    "value": "BEARER_HEADER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "authorize_url", 
+    "value": "www.facebook.com/dialog/oauth"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "access_token_url", 
+    "value": "graph.facebook.com/oauth/access_token"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_id", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_secret", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "redirect_uri", 
+    "value": "http://localhost:8000api/method/programmer.authorize"
+   }
+  ], 
+  "permissions": [
+   {
+    "description": "Read Your Basic, Public Information", 
+    "parameter": "None"
+   }, 
+   {
+    "description": "Access Your Email Address", 
+    "parameter": "email"
+   }, 
+   {
+    "description": "Access Your Profile Information", 
+    "parameter": "user_about_me"
+   }, 
+   {
+    "description": "Access Your Favorite Activities", 
+    "parameter": "user_activities"
+   }, 
+   {
+    "description": "Access Your Birthday", 
+    "parameter": "user_birthday"
+   }, 
+   {
+    "description": "Access Your Checkins", 
+    "parameter": "user_checkins"
+   }, 
+   {
+    "description": "Access Your Education History", 
+    "parameter": "user_education_history"
+   }, 
+   {
+    "description": "Access Your Events", 
+    "parameter": "user_events"
+   }, 
+   {
+    "description": "Access Your Groups", 
+    "parameter": "user_groups"
+   }, 
+   {
+    "description": "Access Your Hometown", 
+    "parameter": "user_hometown"
+   }, 
+   {
+    "description": "Access Your Interests", 
+    "parameter": "user_interests"
+   }, 
+   {
+    "description": "Access The Things You Like", 
+    "parameter": "user_likes"
+   }, 
+   {
+    "description": "Access Your Location", 
+    "parameter": "user_location"
+   }, 
+   {
+    "description": "Access Your Notes", 
+    "parameter": "user_notes"
+   }, 
+   {
+    "description": "Access Your Online Presence", 
+    "parameter": "user_online_presence"
+   }, 
+   {
+    "description": "Access Your Photos", 
+    "parameter": "user_photos"
+   }, 
+   {
+    "description": "Access Your Questions", 
+    "parameter": "user_questions"
+   }, 
+   {
+    "description": "Access Your Relationships", 
+    "parameter": "user_relationships"
+   }, 
+   {
+    "description": "Access Your Relationship Details", 
+    "parameter": "user_relationship_details"
+   }, 
+   {
+    "description": "Access Your Religious And Policial Affiliations", 
+    "parameter": "user_religion_politics"
+   }, 
+   {
+    "description": "Access Your Most Recent Status", 
+    "parameter": "user_status"
+   }, 
+   {
+    "description": "Access Your Videos", 
+    "parameter": "user_videos"
+   }, 
+   {
+    "description": "Access Your Website Address", 
+    "parameter": "user_website"
+   }, 
+   {
+    "description": "Access Your Work History", 
+    "parameter": "user_work_history"
+   }, 
+   {
+    "description": "Access Your Friends' Profile Information", 
+    "parameter": "friends_about_me"
+   }, 
+   {
+    "description": "Access Your Friends' Favoriate Activities", 
+    "parameter": "friends_activities"
+   }, 
+   {
+    "description": "Access Your Friends' Birthdays", 
+    "parameter": "friends_birthday"
+   }, 
+   {
+    "description": "Access Your Friends' Checkins", 
+    "parameter": "friends_checkins"
+   }, 
+   {
+    "description": "Access Your Friends' Education History", 
+    "parameter": "friends_education_history"
+   }, 
+   {
+    "description": "Access Your Friends' Events", 
+    "parameter": "friends_events"
+   }, 
+   {
+    "description": "Access Your Friends' Groups", 
+    "parameter": "friends_groups"
+   }, 
+   {
+    "description": "Access Your Friends' Hometowns", 
+    "parameter": "friends_hometown"
+   }, 
+   {
+    "description": "Access Your Friends' Interests", 
+    "parameter": "friends_interests"
+   }, 
+   {
+    "description": "Access The Things Your Friends Like", 
+    "parameter": "friends_likes"
+   }, 
+   {
+    "description": "Access Your Friends' Locations", 
+    "parameter": "friends_location"
+   }, 
+   {
+    "description": "Access Your Friends' Notes", 
+    "parameter": "friends_notes"
+   }, 
+   {
+    "description": "Access Your Friends' Online Presence", 
+    "parameter": "friends_online_presence"
+   }, 
+   {
+    "description": "Access Your Friends' Photos", 
+    "parameter": "friends_photos"
+   }, 
+   {
+    "description": "Access Your Friends' Questions", 
+    "parameter": "friends_questions"
+   }, 
+   {
+    "description": "Access Your Friends' Relationships", 
+    "parameter": "friends_relationships"
+   }, 
+   {
+    "description": "Access Your Friends' Relationship Details", 
+    "parameter": "friends_relationship_details"
+   }, 
+   {
+    "description": "Access Your Friends' Religious And Political Affiliations", 
+    "parameter": "friends_religion_politics"
+   }, 
+   {
+    "description": "Access Your Friends' Most Recent Statuses", 
+    "parameter": "friends_status"
+   }, 
+   {
+    "description": "Access Your Friends' Videos", 
+    "parameter": "friends_videos"
+   }, 
+   {
+    "description": "Access Your Friends' Website Addresses", 
+    "parameter": "friends_website"
+   }, 
+   {
+    "description": "Access Your Friends' Work History", 
+    "parameter": "friends_work_history"
+   }
+  ], 
+  "provider_url": "facebook.com", 
+  "resources": []
+ }, 
+ {
+  "active": 0, 
+  "api_auth_method": "oAuth2", 
+  "api_domain": "sandbox.familysearch.org", 
+  "api_name": "Family Search", 
+  "api_type": "Rest", 
+  "docstatus": 0, 
+  "doctype": "API", 
+  "https": 0, 
+  "keys": [], 
+  "methods": [], 
+  "modified": "2015-09-06 01:19:01.271437", 
+  "name": "Family Search - Rest - oAuth2", 
+  "parameters": [
+   {
+    "ctx": "Class", 
+    "parameter": "signature_method", 
+    "value": "SIGNATURE_HMAC"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "signature_type", 
+    "value": "SIGNATURE_TYPE_AUTH_READER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "token_type", 
+    "value": "BEARER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "bearer_type", 
+    "value": "BEARER_HEADER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "authorize_url", 
+    "value": "sandbox.familysearch.org/cis-web/oauth2/v3/authorization"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "access_token_url", 
+    "value": "sandbox.familysearch.org/cis-web/oauth2/v3/token"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_id", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_secret", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "redirect_uri", 
+    "value": "http://localhost:8000api/method/programmer.authorize"
+   }
+  ], 
+  "permissions": [
+   {
+    "description": "Read and write to your family tree", 
+    "parameter": "None"
+   }
+  ], 
+  "provider_url": "www.familysearch.com", 
+  "resources": []
+ }, 
+ {
+  "active": 0, 
+  "api_auth_method": "oAuth1", 
+  "api_domain": "api.fitbit.com", 
+  "api_name": "FitBit", 
+  "api_type": "Rest", 
+  "docstatus": 0, 
+  "doctype": "API", 
+  "https": 1, 
+  "keys": [], 
+  "methods": [], 
+  "modified": "2015-09-06 01:33:40.920166", 
+  "name": "FitBit - Rest - oAuth1", 
+  "parameters": [
+   {
+    "ctx": "Class", 
+    "parameter": "signature_method", 
+    "value": "SIGNATURE_HMAC"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "signature_type", 
+    "value": "SIGNATURE_TYPE_AUTH_READER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "token_type", 
+    "value": "BEARER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "bearer_type", 
+    "value": "BEARER_HEADER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "request_token_url", 
+    "value": "api.fitbit.com/oauth/request_token"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "authorize_url", 
+    "value": "www.fitbit.com/oauth/authorize"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "access_token_url", 
+    "value": "api.fitbit.com/oauth/access_token"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_id", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_secret", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "returns_token", 
+    "value": "1"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "redirect_uri", 
+    "value": "http://localhost:8000api/method/programmer.authorize"
+   }
+  ], 
+  "permissions": [
+   {
+    "description": "Read and write your fitness data", 
+    "parameter": "None"
+   }
+  ], 
+  "provider_url": "www.fitbit.com", 
+  "resources": []
+ }, 
+ {
+  "active": 0, 
+  "api_auth_method": "oAuth1", 
+  "api_domain": "api.500px.com", 
+  "api_name": "500px", 
+  "api_type": "Rest", 
+  "docstatus": 0, 
+  "doctype": "API", 
+  "https": 0, 
+  "keys": [], 
+  "methods": [], 
+  "modified": "2015-09-06 01:22:59.094292", 
+  "name": "500px - Rest - oAuth1", 
+  "parameters": [
+   {
+    "ctx": "Class", 
+    "parameter": "signature_method", 
+    "value": "SIGNATURE_HMAC"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "signature_type", 
+    "value": "SIGNATURE_TYPE_AUTH_READER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "token_type", 
+    "value": "BEARER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "bearer_type", 
+    "value": "BEARER_HEADER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "request_token_url", 
+    "value": "api.500px.com/v1/oauth/request_token"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "authorize_url", 
+    "value": "api.500px.com/v1/oauth/authorize"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "access_token_url", 
+    "value": "api.500px.com/v1/oauth/access_token"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_id", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_secret", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "returns_token", 
+    "value": "1"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "redirect_uri", 
+    "value": "http://localhost:8000api/method/programmer.authorize"
+   }
+  ], 
+  "permissions": [
+   {
+    "description": "Access and manage your photos", 
+    "parameter": "None"
+   }
+  ], 
+  "provider_url": "500px.com", 
+  "resources": []
+ }, 
+ {
+  "active": 0, 
+  "api_auth_method": "oAuth1", 
+  "api_domain": "api.flickr.com", 
+  "api_name": "Flickr", 
+  "api_type": "Rest", 
+  "docstatus": 0, 
+  "doctype": "API", 
+  "https": 1, 
+  "keys": [], 
+  "methods": [], 
+  "modified": "2015-09-06 01:33:49.050044", 
+  "name": "Flickr - Rest - oAuth1", 
+  "parameters": [
+   {
+    "ctx": "Class", 
+    "parameter": "signature_method", 
+    "value": "SIGNATURE_HMAC"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "signature_type", 
+    "value": "SIGNATURE_TYPE_AUTH_READER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "token_type", 
+    "value": "BEARER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "bearer_type", 
+    "value": "BEARER_HEADER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "request_token_url", 
+    "value": "www.flickr.com/services/oauth/request_token"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "authorize_url", 
+    "value": "www.flickr.com/services/oauth/authorize"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "access_token_url", 
+    "value": "www.flickr.com/services/oauth/access_token"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_id", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_secret", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "returns_token", 
+    "value": "1"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "redirect_uri", 
+    "value": "http://localhost:8000api/method/programmer.authorize"
+   }
+  ], 
+  "permissions": [
+   {
+    "description": "Access your public and private photos", 
+    "parameter": "None"
+   }, 
+   {
+    "description": "Upload, edit and replace your photos", 
+    "parameter": "write"
+   }, 
+   {
+    "description": "Upload, edit, replace and delete your photos", 
+    "parameter": "delete"
+   }
+  ], 
+  "provider_url": "www.flickr.com", 
+  "resources": []
+ }, 
+ {
+  "active": 0, 
+  "api_auth_method": "oAuth2", 
+  "api_domain": "api.foursquare.com", 
+  "api_name": "Foursquare", 
+  "api_type": "Rest", 
+  "docstatus": 0, 
+  "doctype": "API", 
+  "https": 1, 
+  "keys": [], 
+  "methods": [], 
+  "modified": "2015-09-06 01:33:56.453010", 
+  "name": "Foursquare - Rest - oAuth2", 
+  "parameters": [
+   {
+    "ctx": "Class", 
+    "parameter": "signature_method", 
+    "value": "SIGNATURE_HMAC"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "signature_type", 
+    "value": "SIGNATURE_TYPE_AUTH_READER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "token_type", 
+    "value": "BEARER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "bearer_type", 
+    "value": "BEARER_HEADER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "authorize_url", 
+    "value": "foursquare.com/oauth2/authorize"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "access_token_url", 
+    "value": "foursquare.com/oauth2/access_token"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_id", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_secret", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "redirect_uri", 
+    "value": "http://localhost:8000api/method/programmer.authorize"
+   }
+  ], 
+  "permissions": [
+   {
+    "description": "Read and write to your check-ins", 
+    "parameter": "None"
+   }
+  ], 
+  "provider_url": "www.foursquare.com", 
+  "resources": []
+ }, 
+ {
+  "active": 0, 
+  "api_auth_method": "oAuth1", 
+  "api_domain": "friendfeed-api.com", 
+  "api_name": "Friendfeed", 
+  "api_type": "Rest", 
+  "docstatus": 0, 
+  "doctype": "API", 
+  "https": 1, 
+  "keys": [], 
+  "methods": [], 
+  "modified": "2015-09-06 01:34:05.081355", 
+  "name": "Friendfeed - Rest - oAuth1", 
+  "parameters": [
+   {
+    "ctx": "Class", 
+    "parameter": "signature_method", 
+    "value": "SIGNATURE_HMAC"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "signature_type", 
+    "value": "SIGNATURE_TYPE_AUTH_READER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "token_type", 
+    "value": "BEARER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "bearer_type", 
+    "value": "BEARER_HEADER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "request_token_url", 
+    "value": "friendfeed.com/account/oauth/request_token"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "authorize_url", 
+    "value": "friendfeed.com/account/oauth/authorize"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "access_token_url", 
+    "value": "friendfeed.com/account/oauth/access_token"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_id", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_secret", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "returns_token", 
+    "value": "1"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "redirect_uri", 
+    "value": "http://localhost:8000api/method/programmer.authorize"
+   }
+  ], 
+  "permissions": [], 
+  "provider_url": "friendfeed.com", 
+  "resources": []
+ }, 
+ {
+  "active": 0, 
+  "api_auth_method": "oAuth2", 
+  "api_domain": "www.geni.com", 
+  "api_name": "Geni", 
+  "api_type": "Rest", 
+  "docstatus": 0, 
+  "doctype": "API", 
+  "https": 1, 
+  "keys": [], 
+  "methods": [], 
+  "modified": "2015-09-06 01:35:43.751842", 
+  "name": "Geni - Rest - oAuth2", 
+  "parameters": [
+   {
+    "ctx": "Class", 
+    "parameter": "signature_method", 
+    "value": "SIGNATURE_HMAC"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "signature_type", 
+    "value": "SIGNATURE_TYPE_AUTH_READER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "token_type", 
+    "value": "BEARER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "bearer_type", 
+    "value": "BEARER_HEADER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "authorize_url", 
+    "value": "www.geni.com/platform/oauth/authorize"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "access_token_url", 
+    "value": "www.geni.com/platform/oauth/request_token"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_id", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_secret", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "redirect_uri", 
+    "value": "http://localhost:8000api/method/programmer.authorize"
+   }
+  ], 
+  "permissions": [
+   {
+    "description": "Read and write to your family tree", 
+    "parameter": "None"
+   }
+  ], 
+  "provider_url": "www.geni.com", 
+  "resources": []
+ }, 
+ {
+  "active": 0, 
+  "api_auth_method": "oAuth1", 
+  "api_domain": "api.getsatisfaction.com", 
+  "api_name": "Get Satisfaction", 
+  "api_type": "Rest", 
+  "docstatus": 0, 
+  "doctype": "API", 
+  "https": 0, 
+  "keys": [], 
+  "methods": [], 
+  "modified": "2015-09-06 01:37:47.585171", 
+  "name": "Get Satisfaction - Rest - oAuth1", 
+  "parameters": [
+   {
+    "ctx": "Class", 
+    "parameter": "signature_method", 
+    "value": "SIGNATURE_HMAC"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "signature_type", 
+    "value": "SIGNATURE_TYPE_AUTH_READER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "token_type", 
+    "value": "BEARER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "bearer_type", 
+    "value": "BEARER_HEADER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "request_token_url", 
+    "value": "getsatisfaction.com/api/request_token"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "authorize_url", 
+    "value": "getsatisfaction.com/api/authorize"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "access_token_url", 
+    "value": "getsatisfaction.com/api/access_token"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_id", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_secret", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "returns_token", 
+    "value": "1"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "redirect_uri", 
+    "value": "http://localhost:8000api/method/programmer.authorize"
+   }
+  ], 
+  "permissions": [
+   {
+    "description": "Access your support requests", 
+    "parameter": "None"
+   }
+  ], 
+  "provider_url": "getsatisfaction.com", 
+  "resources": []
+ }, 
+ {
+  "active": 0, 
+  "api_auth_method": "oAuth2", 
+  "api_domain": "api.github.com", 
+  "api_name": "Github", 
+  "api_type": "Rest", 
+  "docstatus": 0, 
+  "doctype": "API", 
+  "https": 1, 
+  "keys": [], 
+  "methods": [], 
+  "modified": "2015-09-06 01:44:27.303401", 
+  "name": "Github - Rest - oAuth2", 
+  "parameters": [
+   {
+    "ctx": "Class", 
+    "parameter": "signature_method", 
+    "value": "SIGNATURE_HMAC"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "signature_type", 
+    "value": "SIGNATURE_TYPE_AUTH_READER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "token_type", 
+    "value": "BEARER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "bearer_type", 
+    "value": "BEARER_HEADER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "authorize_url", 
+    "value": "github.com/login/oauth/authorize"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "access_token_url", 
+    "value": "github.com/login/oauth/access_token"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_id", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_secret", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "redirect_uri", 
+    "value": "http://localhost:8000api/method/programmer.authorize"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "supports_state", 
+    "value": "0"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "scopes_separator", 
+    "value": ","
+   }
+  ], 
+  "permissions": [
+   {
+    "description": "Read your public profile, public repo info and gists.", 
+    "parameter": "None"
+   }, 
+   {
+    "description": "Read your email address", 
+    "parameter": "user:email"
+   }, 
+   {
+    "description": "Follow and unfollow users", 
+    "parameter": "user:follow"
+   }, 
+   {
+    "description": "Read and write to your entire profile", 
+    "parameter": "user"
+   }, 
+   {
+    "description": "Write to your public repo info", 
+    "parameter": "public_repo"
+   }, 
+   {
+    "description": "Write to your public and private repo info", 
+    "parameter": "repo"
+   }, 
+   {
+    "description": "Write to your gists", 
+    "parameter": "gist"
+   }
+  ], 
+  "provider_url": "github.com", 
+  "resources": []
+ }, 
+ {
+  "active": 0, 
+  "api_auth_method": "oAuth1", 
+  "api_domain": "www.goodreads.com", 
+  "api_name": "Goodreads", 
+  "api_type": "Rest", 
+  "docstatus": 0, 
+  "doctype": "API", 
+  "https": 0, 
+  "keys": [], 
+  "methods": [], 
+  "modified": "2015-09-06 01:52:15.002878", 
+  "name": "Goodreads - Rest - oAuth1", 
+  "parameters": [
+   {
+    "ctx": "Class", 
+    "parameter": "signature_method", 
+    "value": "SIGNATURE_HMAC"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "signature_type", 
+    "value": "SIGNATURE_TYPE_AUTH_READER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "token_type", 
+    "value": "BEARER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "bearer_type", 
+    "value": "BEARER_HEADER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "request_token_url", 
+    "value": "www.goodreads.com/oauth/request_token"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "authorize_url", 
+    "value": "www.goodreads.com/oauth/authorize"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "access_token_url", 
+    "value": "www.goodreads.com/oauth/access_token"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_id", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_secret", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "returns_token", 
+    "value": "1"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "redirect_uri", 
+    "value": "http://localhost:8000api/method/programmer.authorize"
+   }
+  ], 
+  "permissions": [
+   {
+    "description": "Read and write to your reading history", 
+    "parameter": "None"
+   }
+  ], 
+  "provider_url": "www.goodreads.com", 
+  "resources": []
+ }, 
+ {
+  "active": 0, 
+  "api_auth_method": "oAuth2", 
+  "api_domain": "api.google.com", 
+  "api_name": "Google", 
+  "api_type": "Rest", 
+  "docstatus": 0, 
+  "doctype": "API", 
+  "https": 1, 
+  "keys": [], 
+  "methods": [], 
+  "modified": "2015-09-06 01:57:18.564715", 
+  "name": "Google - Rest - oAuth2", 
+  "parameters": [
+   {
+    "ctx": "Class", 
+    "parameter": "signature_method", 
+    "value": "SIGNATURE_HMAC"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "signature_type", 
+    "value": "SIGNATURE_TYPE_AUTH_READER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "token_type", 
+    "value": "BEARER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "bearer_type", 
+    "value": "BEARER_URI"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "authorize_url", 
+    "value": ""
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "access_token_url", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_id", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_secret", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "redirect_uri", 
+    "value": "http://localhost:8000api/method/programmer.authorize"
+   }
+  ], 
+  "permissions": [
+   {
+    "description": "Read Your Email Address", 
+    "parameter": "None"
+   }, 
+   {
+    "description": "Read Your Basic Profile Information", 
+    "parameter": "https://www.googleapis.com/auth/userinfo.profile"
+   }, 
+   {
+    "description": "Access Your Analytics", 
+    "parameter": "https://www.googleapis.com/auth/analytics"
+   }, 
+   {
+    "description": "Access Your Blogs", 
+    "parameter": "https://www.googleapis.com/auth/blogger"
+   }, 
+   {
+    "description": "Access Your Books", 
+    "parameter": "https://www.googleapis.com/auth/books"
+   }, 
+   {
+    "description": "Access Your Calendars", 
+    "parameter": "https://www.googleapis.com/auth/calendar"
+   }, 
+   {
+    "description": "Access Your Contacts", 
+    "parameter": "https://www.googleapis.com/auth/contacts"
+   }, 
+   {
+    "description": "Access Shopping Data", 
+    "parameter": "https://www.googleapis.com/auth/structuredcontent"
+   }, 
+   {
+    "description": "Access Your Documents", 
+    "parameter": "https://www.googleapis.com/auth/docs"
+   }, 
+   {
+    "description": "Access Your Photos", 
+    "parameter": "https://www.googleapis.com/auth/picasa"
+   }, 
+   {
+    "description": "Access Your Spreadsheets", 
+    "parameter": "https://www.googleapis.com/auth/spreadsheets"
+   }, 
+   {
+    "description": "Read And Write To Your Tasks", 
+    "parameter": "https://www.googleapis.com/auth/tasks"
+   }, 
+   {
+    "description": "Access Your Google+ Data", 
+    "parameter": "https://www.googleapis.com/auth/plus.me"
+   }, 
+   {
+    "description": "Access Your Shortened Urls", 
+    "parameter": "https://www.googleapis.com/auth/urlshortener"
+   }, 
+   {
+    "description": "Access Your Videos", 
+    "parameter": "https://www.googleapis.com/auth/youtube"
+   }, 
+   {
+    "description": "Manage Your Adsense Data", 
+    "parameter": "https://www.googleapis.com/auth/adsense"
+   }, 
+   {
+    "description": "Manage Your Affiliate Options", 
+    "parameter": "https://www.googleapis.com/auth/gan"
+   }, 
+   {
+    "description": "Read And Write To Your Cloud Storage", 
+    "parameter": "https://www.googleapis.com/auth/devstorage.read_write"
+   }, 
+   {
+    "description": "Access Shopping Content", 
+    "parameter": "https://www.googleapis.com/auth/structuredcontent"
+   }, 
+   {
+    "description": "Access Your Chrome Store Settings", 
+    "parameter": "https://www.googleapis.com/auth/chromewebstore"
+   }, 
+   {
+    "description": "Access Your Google Drive", 
+    "parameter": "https://www.googleapis.com/auth/drive.file"
+   }, 
+   {
+    "description": "Access Your Location Information", 
+    "parameter": "https://www.googleapis.com/auth/latitude.all.best"
+   }, 
+   {
+    "description": "Access Moderator Content", 
+    "parameter": "https://www.googleapis.com/auth/moderator"
+   }, 
+   {
+    "description": "Access Your Orkut Data", 
+    "parameter": "https://www.googleapis.com/auth/orkut"
+   }, 
+   {
+    "description": "Access Your Videos", 
+    "parameter": "https://www.googleapis.com/auth/youtube"
+   }, 
+   {
+    "description": "Read Your Fusion Tables", 
+    "parameter": "https://www.googleapis.com/auth/fusiontables.readonly"
+   }, 
+   {
+    "description": "Read And Write To Your Fusion Tables", 
+    "parameter": "https://www.googleapis.com/auth/fusiontables"
+   }, 
+   {
+    "description": "Access Your News Feeds", 
+    "parameter": "http://www.google.com/reader/api"
+   }, 
+   {
+    "description": "Access Your Webmaster Tools", 
+    "parameter": "http://www.google.com/webmasters/tools/feeds/"
+   }, 
+   {
+    "description": "Access Financial Information", 
+    "parameter": "http://finance.google.com/finance/feeds/"
+   }, 
+   {
+    "description": "Access Your Email", 
+    "parameter": "https://mail.google.com/"
+   }, 
+   {
+    "description": "Access Your Custom Maps", 
+    "parameter": "http://maps.google.com/maps/feeds/"
+   }, 
+   {
+    "description": "Access Your Sites", 
+    "parameter": "https://sites.google.com/feeds/"
+   }
+  ], 
+  "provider_url": "www.google.com", 
+  "resources": []
+ }, 
+ {
+  "active": 0, 
+  "api_auth_method": "oAuth2", 
+  "api_domain": "api.groupme.com", 
+  "api_name": "Group Me", 
+  "api_type": "Rest", 
+  "docstatus": 0, 
+  "doctype": "API", 
+  "https": 0, 
+  "keys": [], 
+  "methods": [], 
+  "modified": "2015-09-06 02:01:58.630754", 
+  "name": "Group Me - Rest - oAuth2", 
+  "parameters": [
+   {
+    "ctx": "Class", 
+    "parameter": "signature_method", 
+    "value": "SIGNATURE_HMAC"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "signature_type", 
+    "value": "SIGNATURE_TYPE_AUTH_READER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "token_type", 
+    "value": "BEARER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "bearer_type", 
+    "value": "BEARER_HEADER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "authorize_url", 
+    "value": "api.groupme.com/oauth/authorize"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "access_token_url", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_id", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_secret", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "redirect_uri", 
+    "value": "http://localhost:8000api/method/programmer.authorize"
+   }
+  ], 
+  "permissions": [
+   {
+    "description": "Access and manage your profile and messages", 
+    "parameter": "None"
+   }
+  ], 
+  "provider_url": "groupme.com", 
+  "resources": []
+ }, 
+ {
+  "active": 0, 
+  "api_auth_method": "oAuth2", 
+  "api_domain": "api.heroku.com", 
+  "api_name": "Heroku", 
+  "api_type": "Rest", 
+  "docstatus": 0, 
+  "doctype": "API", 
+  "https": 1, 
+  "keys": [], 
+  "methods": [], 
+  "modified": "2015-09-06 02:38:58.571015", 
+  "name": "Heroku - Rest - oAuth2", 
+  "parameters": [
+   {
+    "ctx": "Class", 
+    "parameter": "signature_method", 
+    "value": "SIGNATURE_HMAC"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "signature_type", 
+    "value": "SIGNATURE_TYPE_AUTH_READER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "token_type", 
+    "value": "BEARER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "bearer_type", 
+    "value": "BEARER_HEADER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "authorize_url", 
+    "value": "id.heroku.com/oauth/authorize"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "access_token_url", 
+    "value": "id.heroku.com/oauth/token"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_id", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_secret", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "redirect_uri", 
+    "value": "http://localhost:8000api/method/programmer.authorize"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "permissions_widget", 
+    "value": "radio"
+   }
+  ], 
+  "permissions": [
+   {
+    "description": "Read your account information", 
+    "parameter": "None"
+   }, 
+   {
+    "description": "Read all of your apps and resources, excluding configuration values.", 
+    "parameter": "read"
+   }, 
+   {
+    "description": "Write to all of your apps and resources, excluding configuration values", 
+    "parameter": "write"
+   }, 
+   {
+    "description": "Read all of your apps and resources, including configuration values", 
+    "parameter": "read-protected"
+   }, 
+   {
+    "description": "Write to all of your apps and resources, including configuration values", 
+    "parameter": "write-protected"
+   }, 
+   {
+    "description": "Read and write of your account, apps and resource.", 
+    "parameter": "global"
+   }
+  ], 
+  "provider_url": "heroku.com", 
+  "resources": []
+ }, 
+ {
+  "active": 0, 
+  "api_auth_method": "oAuth2", 
+  "api_domain": "api.imgur.com", 
+  "api_name": "Imgur", 
+  "api_type": "Rest", 
+  "docstatus": 0, 
+  "doctype": "API", 
+  "https": 1, 
+  "keys": [], 
+  "methods": [], 
+  "modified": "2015-09-06 02:41:04.285734", 
+  "name": "Imgur - Rest - oAuth2", 
+  "parameters": [
+   {
+    "ctx": "Class", 
+    "parameter": "signature_method", 
+    "value": "SIGNATURE_HMAC"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "signature_type", 
+    "value": "SIGNATURE_TYPE_AUTH_READER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "token_type", 
+    "value": "BEARER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "bearer_type", 
+    "value": "BEARER_HEADER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "authorize_url", 
+    "value": "api.imgur.com/oauth2/authorize"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "access_token_url", 
+    "value": "api.imgur.com/oauth2/token"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_id", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_secret", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "redirect_uri", 
+    "value": "http://localhost:8000api/method/programmer.authorize"
+   }
+  ], 
+  "permissions": [
+   {
+    "description": "Read and write to your images.", 
+    "parameter": "None"
+   }
+  ], 
+  "provider_url": "imgur.com", 
+  "resources": []
+ }, 
+ {
+  "active": 0, 
+  "api_auth_method": "oAuth2", 
+  "api_domain": "api.instagram.com", 
+  "api_name": "Instagram", 
+  "api_type": "Rest", 
+  "docstatus": 0, 
+  "doctype": "API", 
+  "https": 1, 
+  "keys": [], 
+  "methods": [
+   {
+    "acceptable_values": null, 
+    "accepts_parameters": "[\"count\",\"max_id\"]", 
+    "exclude_format": 0, 
+    "function": "media_popular", 
+    "include_secret": 0, 
+    "method": "GET", 
+    "objectify_response": 1, 
+    "paginates": 0, 
+    "path": "/media/popular", 
+    "requires_target_user": 0, 
+    "resource": null, 
+    "response_type": "List", 
+    "root_class": "Media", 
+    "signature": 0
+   }, 
+   {
+    "acceptable_values": null, 
+    "accepts_parameters": "[\"q\",\"count\",\"lat\",\"lng\",\"min_timestamp\",\"max_timestamp\",\"distance\"]", 
+    "exclude_format": 0, 
+    "function": "media_search", 
+    "include_secret": 0, 
+    "method": "GET", 
+    "objectify_response": 1, 
+    "paginates": 0, 
+    "path": "/media/search", 
+    "requires_target_user": 0, 
+    "resource": null, 
+    "response_type": "List", 
+    "root_class": "Media", 
+    "signature": 0
+   }, 
+   {
+    "acceptable_values": null, 
+    "accepts_parameters": "[\"shortcode\"]", 
+    "exclude_format": 0, 
+    "function": "media_shortcode", 
+    "include_secret": 0, 
+    "method": "GET", 
+    "objectify_response": 1, 
+    "paginates": 0, 
+    "path": "/media/shortcode/{shortcode}", 
+    "requires_target_user": 0, 
+    "resource": null, 
+    "response_type": "Entry", 
+    "root_class": "MediaShortcode", 
+    "signature": 0
+   }, 
+   {
+    "acceptable_values": null, 
+    "accepts_parameters": "[\"media_id\"]", 
+    "exclude_format": 0, 
+    "function": "media_likes", 
+    "include_secret": 0, 
+    "method": "GET", 
+    "objectify_response": 1, 
+    "paginates": 0, 
+    "path": "/media/{media_id}/likes", 
+    "requires_target_user": 0, 
+    "resource": null, 
+    "response_type": "List", 
+    "root_class": "User", 
+    "signature": 0
+   }, 
+   {
+    "acceptable_values": null, 
+    "accepts_parameters": "[\"media_id\"]", 
+    "exclude_format": 0, 
+    "function": "like_media", 
+    "include_secret": 0, 
+    "method": "POST", 
+    "objectify_response": 1, 
+    "paginates": 0, 
+    "path": "/media/{media_id}/likes", 
+    "requires_target_user": 0, 
+    "resource": null, 
+    "response_type": "Empty", 
+    "root_class": null, 
+    "signature": 1
+   }, 
+   {
+    "acceptable_values": null, 
+    "accepts_parameters": "[\"media_id\"]", 
+    "exclude_format": 0, 
+    "function": "unlike_media", 
+    "include_secret": 0, 
+    "method": "DELETE", 
+    "objectify_response": 1, 
+    "paginates": 0, 
+    "path": "/media/{media_id}/likes", 
+    "requires_target_user": 0, 
+    "resource": null, 
+    "response_type": "Empty", 
+    "root_class": null, 
+    "signature": 1
+   }, 
+   {
+    "acceptable_values": null, 
+    "accepts_parameters": "[\"media_id\"]", 
+    "exclude_format": 0, 
+    "function": "create_media_comment", 
+    "include_secret": 0, 
+    "method": "POST", 
+    "objectify_response": 1, 
+    "paginates": 0, 
+    "path": "/media/{media_id}/comments", 
+    "requires_target_user": 0, 
+    "resource": null, 
+    "response_type": "Empty", 
+    "root_class": "Comment", 
+    "signature": 1
+   }, 
+   {
+    "acceptable_values": null, 
+    "accepts_parameters": "[\"media_id\",\"comment_id\"]", 
+    "exclude_format": 0, 
+    "function": "delete_comment", 
+    "include_secret": 0, 
+    "method": "DELETE", 
+    "objectify_response": 1, 
+    "paginates": 0, 
+    "path": "/media/{media_id}/comments/{comment_id}", 
+    "requires_target_user": 0, 
+    "resource": null, 
+    "response_type": "Empty", 
+    "root_class": null, 
+    "signature": 1
+   }, 
+   {
+    "acceptable_values": null, 
+    "accepts_parameters": "[\"media_id\"]", 
+    "exclude_format": 0, 
+    "function": "media_comments", 
+    "include_secret": 0, 
+    "method": "GET", 
+    "objectify_response": 1, 
+    "paginates": 0, 
+    "path": "/media/{media_id}/comments", 
+    "requires_target_user": 0, 
+    "resource": null, 
+    "response_type": "List", 
+    "root_class": "Comment", 
+    "signature": 0
+   }, 
+   {
+    "acceptable_values": null, 
+    "accepts_parameters": "[\"media_id\"]", 
+    "exclude_format": 0, 
+    "function": "media", 
+    "include_secret": 0, 
+    "method": "GET", 
+    "objectify_response": 1, 
+    "paginates": 0, 
+    "path": "/media/{media_id}", 
+    "requires_target_user": 0, 
+    "resource": null, 
+    "response_type": "Entry", 
+    "root_class": "Media", 
+    "signature": 0
+   }, 
+   {
+    "acceptable_values": null, 
+    "accepts_parameters": "[\"count\",\"max_id\"]", 
+    "exclude_format": 0, 
+    "function": "user_media_feed", 
+    "include_secret": 0, 
+    "method": "GET", 
+    "objectify_response": 1, 
+    "paginates": 1, 
+    "path": "/users/self/feed", 
+    "requires_target_user": 0, 
+    "resource": null, 
+    "response_type": "Entry", 
+    "root_class": "Media", 
+    "signature": 0
+   }, 
+   {
+    "acceptable_values": null, 
+    "accepts_parameters": "[\"count\",\"max_id\"]", 
+    "exclude_format": 0, 
+    "function": "user_liked_media", 
+    "include_secret": 0, 
+    "method": "GET", 
+    "objectify_response": 1, 
+    "paginates": 1, 
+    "path": "/users/self/media/liked", 
+    "requires_target_user": 0, 
+    "resource": null, 
+    "response_type": "List", 
+    "root_class": "Media", 
+    "signature": 0
+   }, 
+   {
+    "acceptable_values": null, 
+    "accepts_parameters": "[\"count\",\"max_id\",\"user_id\",\"min_id\",\"max_timestamp\",\"min_timestamp\"]", 
+    "exclude_format": 0, 
+    "function": "user_recent_media", 
+    "include_secret": 0, 
+    "method": "GET", 
+    "objectify_response": 1, 
+    "paginates": 1, 
+    "path": "/user/{user_id}/recent/media", 
+    "requires_target_user": 0, 
+    "resource": null, 
+    "response_type": "List", 
+    "root_class": "Media", 
+    "signature": 0
+   }, 
+   {
+    "acceptable_values": null, 
+    "accepts_parameters": "[\"q\",\"count\"]", 
+    "exclude_format": 0, 
+    "function": "user_search", 
+    "include_secret": 0, 
+    "method": "GET", 
+    "objectify_response": 1, 
+    "paginates": 1, 
+    "path": "/user/search", 
+    "requires_target_user": 0, 
+    "resource": null, 
+    "response_type": "List", 
+    "root_class": "User", 
+    "signature": 0
+   }, 
+   {
+    "acceptable_values": null, 
+    "accepts_parameters": "[\"user_id\"]", 
+    "exclude_format": 0, 
+    "function": "user_follows", 
+    "include_secret": 0, 
+    "method": "GET", 
+    "objectify_response": 1, 
+    "paginates": 1, 
+    "path": "/users/{user_id}/follows", 
+    "requires_target_user": 0, 
+    "resource": null, 
+    "response_type": "List", 
+    "root_class": "User", 
+    "signature": 0
+   }, 
+   {
+    "acceptable_values": null, 
+    "accepts_parameters": "[\"user_id\"]", 
+    "exclude_format": 0, 
+    "function": "user_followed_by", 
+    "include_secret": 0, 
+    "method": "GET", 
+    "objectify_response": 1, 
+    "paginates": 0, 
+    "path": "/users/{user_id}/followed-by", 
+    "requires_target_user": 0, 
+    "resource": null, 
+    "response_type": "Entry", 
+    "root_class": "User", 
+    "signature": 0
+   }, 
+   {
+    "acceptable_values": null, 
+    "accepts_parameters": "[\"count\",\"max_id\",\"location_id\"]", 
+    "exclude_format": 0, 
+    "function": "location_recent_media", 
+    "include_secret": 0, 
+    "method": "GET", 
+    "objectify_response": 1, 
+    "paginates": 1, 
+    "path": "/locations/{location_id}/media/recent", 
+    "requires_target_user": 0, 
+    "resource": null, 
+    "response_type": "List", 
+    "root_class": "Media", 
+    "signature": 0
+   }, 
+   {
+    "acceptable_values": null, 
+    "accepts_parameters": "[\"q\",\"count\",\"lat\",\"lng\",\"foursquare_id\",\"foursquare_v2_id\"]", 
+    "exclude_format": 0, 
+    "function": "location_search", 
+    "include_secret": 0, 
+    "method": "GET", 
+    "objectify_response": 1, 
+    "paginates": 1, 
+    "path": "/location/search", 
+    "requires_target_user": 0, 
+    "resource": null, 
+    "response_type": "List", 
+    "root_class": "Location", 
+    "signature": 0
+   }, 
+   {
+    "acceptable_values": null, 
+    "accepts_parameters": "[\"location_in\"]", 
+    "exclude_format": 0, 
+    "function": "location", 
+    "include_secret": 0, 
+    "method": "GET", 
+    "objectify_response": 1, 
+    "paginates": 0, 
+    "path": "/locations/{location_id}", 
+    "requires_target_user": 0, 
+    "resource": null, 
+    "response_type": "Entry", 
+    "root_class": "Location", 
+    "signature": 0
+   }, 
+   {
+    "acceptable_values": null, 
+    "accepts_parameters": "[\"count\",\"max_id\",\"geography_id\"]", 
+    "exclude_format": 0, 
+    "function": "geography_recent_media", 
+    "include_secret": 0, 
+    "method": "GET", 
+    "objectify_response": 1, 
+    "paginates": 1, 
+    "path": "/geographies/{geography_id}/media/recent", 
+    "requires_target_user": 0, 
+    "resource": null, 
+    "response_type": "List", 
+    "root_class": "Media", 
+    "signature": 0
+   }, 
+   {
+    "acceptable_values": null, 
+    "accepts_parameters": "[\"count\",\"max_tag_id\",\"tag_name\"]", 
+    "exclude_format": 0, 
+    "function": "tag_recent_media", 
+    "include_secret": 0, 
+    "method": "GET", 
+    "objectify_response": 1, 
+    "paginates": 1, 
+    "path": "/tags/{tag_name}/media/recent", 
+    "requires_target_user": 0, 
+    "resource": null, 
+    "response_type": "List", 
+    "root_class": "Media", 
+    "signature": 0
+   }, 
+   {
+    "acceptable_values": null, 
+    "accepts_parameters": "[\"q\",\"count\"]", 
+    "exclude_format": 0, 
+    "function": "tag_search", 
+    "include_secret": 0, 
+    "method": "GET", 
+    "objectify_response": 1, 
+    "paginates": 1, 
+    "path": "/tags/search", 
+    "requires_target_user": 0, 
+    "resource": null, 
+    "response_type": "List", 
+    "root_class": "Tag", 
+    "signature": 0
+   }, 
+   {
+    "acceptable_values": null, 
+    "accepts_parameters": "[\"tag_name\"]", 
+    "exclude_format": 0, 
+    "function": "tag", 
+    "include_secret": 0, 
+    "method": "GET", 
+    "objectify_response": 1, 
+    "paginates": 0, 
+    "path": "/tags/{tag_name}", 
+    "requires_target_user": 0, 
+    "resource": null, 
+    "response_type": "Entry", 
+    "root_class": "Tag", 
+    "signature": 0
+   }, 
+   {
+    "acceptable_values": null, 
+    "accepts_parameters": "[]", 
+    "exclude_format": 0, 
+    "function": "user_incoming_requests", 
+    "include_secret": 0, 
+    "method": "GET", 
+    "objectify_response": 1, 
+    "paginates": 0, 
+    "path": "/users/self/requested-by", 
+    "requires_target_user": 0, 
+    "resource": null, 
+    "response_type": "List", 
+    "root_class": "User", 
+    "signature": 0
+   }, 
+   {
+    "acceptable_values": null, 
+    "accepts_parameters": "[\"user_id\",\"action\"]", 
+    "exclude_format": 0, 
+    "function": "change_user_relationship", 
+    "include_secret": 0, 
+    "method": "POST", 
+    "objectify_response": 1, 
+    "paginates": 0, 
+    "path": "/users/{user_id}/relationship", 
+    "requires_target_user": 1, 
+    "resource": null, 
+    "response_type": "Entry", 
+    "root_class": "Relationship", 
+    "signature": 1
+   }
+  ], 
+  "modified": "2015-09-25 01:03:07.575944", 
+  "name": "Instagram - Rest - oAuth2", 
+  "parameters": [
+   {
+    "ctx": "Class", 
+    "parameter": "signature_method", 
+    "value": "SIGNATURE_HMAC"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "signature_type", 
+    "value": "SIGNATURE_TYPE_AUTH_READER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "token_type", 
+    "value": "BEARER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "bearer_type", 
+    "value": "BEARER_URI"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "authorize_url", 
+    "value": "api.instagram.com/oauth/authorize/"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "access_token_url", 
+    "value": "api.instagram.com/oauth/access_token"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_id", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_secret", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "redirect_uri", 
+    "value": "http://localhost:8000api/method/programmer.authorize"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "supports_state", 
+    "value": "0"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "scopes_separator", 
+    "value": "+"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "default_user_id", 
+    "value": "self"
+   }
+  ], 
+  "permissions": [
+   {
+    "description": "Read all data related to you", 
+    "parameter": "basic"
+   }, 
+   {
+    "description": "Create or delete comments", 
+    "parameter": "comments"
+   }, 
+   {
+    "description": "Follow and unfollow users", 
+    "parameter": "relationships"
+   }, 
+   {
+    "description": "Like and unlike items", 
+    "parameter": "likes"
+   }
+  ], 
+  "provider_url": "instagram.com", 
+  "resources": []
+ }, 
+ {
+  "active": 0, 
+  "api_auth_method": "oAuth2", 
+  "api_domain": "jawbone.com", 
+  "api_name": "Jawbone", 
+  "api_type": "Rest", 
+  "docstatus": 0, 
+  "doctype": "API", 
+  "https": 1, 
+  "keys": [], 
+  "methods": [], 
+  "modified": "2015-09-06 02:52:17.746384", 
+  "name": "Jawbone - Rest - oAuth2", 
+  "parameters": [
+   {
+    "ctx": "Class", 
+    "parameter": "signature_method", 
+    "value": "SIGNATURE_HMAC"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "signature_type", 
+    "value": "SIGNATURE_TYPE_AUTH_READER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "token_type", 
+    "value": "BEARER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "bearer_type", 
+    "value": "BEARER_HEADER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "authorize_url", 
+    "value": "jawbone.com/auth/oauth2/auth"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "access_token_url", 
+    "value": "jawbone.com/auth/oauth2/token"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_id", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_secret", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "redirect_uri", 
+    "value": "http://localhost:8000api/method/programmer.authorize"
+   }
+  ], 
+  "permissions": [
+   {
+    "description": "Read your name and profile picture", 
+    "parameter": "None"
+   }, 
+   {
+    "description": "Read your age, gender, weight, and height", 
+    "parameter": "extended_read"
+   }, 
+   {
+    "description": "Read the places you've visited", 
+    "parameter": "location_read"
+   }, 
+   {
+    "description": "Read your list of friends", 
+    "parameter": "friends_read"
+   }, 
+   {
+    "description": "Read your movies and workouts", 
+    "parameter": "mood_read"
+   }, 
+   {
+    "description": "Write to your movies and create workout", 
+    "parameter": "mood_write"
+   }, 
+   {
+    "description": "Read your sleep data", 
+    "parameter": "sleep_read"
+   }, 
+   {
+    "description": "Write to your sleep data", 
+    "parameter": "sleep_write"
+   }, 
+   {
+    "description": "Read to your meals", 
+    "parameter": "meal_read"
+   }, 
+   {
+    "description": "Write to your meals", 
+    "parameter": "meal_write"
+   }, 
+   {
+    "description": "Read your body meals", 
+    "parameter": "weight_read"
+   }, 
+   {
+    "description": "Write to your body metrics", 
+    "parameter": "weight_write"
+   }, 
+   {
+    "description": "Read your heart data", 
+    "parameter": "cardiac_write"
+   }, 
+   {
+    "description": "Write your heart data", 
+    "parameter": "cardiac_write"
+   }, 
+   {
+    "description": "Read all other types of events", 
+    "parameter": "generic_event_read"
+   }, 
+   {
+    "description": "Write to all other types of events", 
+    "parameter": "generic_event_wite"
+   }
+  ], 
+  "provider_url": "jawbone.com", 
+  "resources": []
+ }, 
+ {
+  "active": 0, 
+  "api_auth_method": "oAuth1", 
+  "api_domain": "api.launchpad.net", 
+  "api_name": "Launchpad", 
+  "api_type": "Rest", 
+  "docstatus": 0, 
+  "doctype": "API", 
+  "https": 1, 
+  "keys": [], 
+  "methods": [], 
+  "modified": "2015-09-06 03:16:04.807295", 
+  "name": "Launchpad - Rest - oAuth1", 
+  "parameters": [
+   {
+    "ctx": "Class", 
+    "parameter": "signature_method", 
+    "value": "SIGNATURE_HMAC"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "signature_type", 
+    "value": "SIGNATURE_PLAINTEXT"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "token_type", 
+    "value": "BEARER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "bearer_type", 
+    "value": "BEARER_HEADER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "request_token_url", 
+    "value": "launchpad.net/+request-token"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "authorize_url", 
+    "value": "launchpad.net/+authorize-token"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "access_token_url", 
+    "value": "launchpad.net/+access-token"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_id", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_secret", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "returns_token", 
+    "value": "1"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "redirect_uri", 
+    "value": "http://localhost:8000api/method/programmer.authorize"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "returns_token", 
+    "value": "0"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "permissions_widget", 
+    "value": "radio"
+   }, 
+   {
+    "ctx": "Request Data", 
+    "parameter": "oauth_signature_method", 
+    "value": "PLAINTEXT"
+   }, 
+   {
+    "ctx": "Request Data", 
+    "parameter": "oauth_consumer_key", 
+    "value": "{client_id}"
+   }, 
+   {
+    "ctx": "Request Data", 
+    "parameter": "oauth_signature", 
+    "value": "&"
+   }
+  ], 
+  "permissions": [
+   {
+    "description": "Read non-private data", 
+    "parameter": "READ_PUBLIC"
+   }, 
+   {
+    "description": "Change non private data", 
+    "parameter": "WRITE_PUBLIC"
+   }, 
+   {
+    "description": "Read anything, including private data", 
+    "parameter": "READ_PRIVATE"
+   }, 
+   {
+    "description": "Write anything, including private data", 
+    "parameter": "WRITE_PRIVATE"
+   }
+  ], 
+  "provider_url": "launchpad.net", 
+  "resources": []
+ }, 
+ {
+  "active": 0, 
+  "api_auth_method": "oAuth1", 
+  "api_domain": "api.linkedin.com", 
+  "api_name": "LinkedIn", 
+  "api_type": "Rest", 
+  "docstatus": 0, 
+  "doctype": "API", 
+  "https": 1, 
+  "keys": [], 
+  "methods": [], 
+  "modified": "2015-09-06 03:15:24.360818", 
+  "name": "LinkedIn - Rest - oAuth1", 
+  "parameters": [
+   {
+    "ctx": "Class", 
+    "parameter": "signature_method", 
+    "value": "SIGNATURE_HMAC"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "signature_type", 
+    "value": "SIGNATURE_TYPE_AUTH_READER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "token_type", 
+    "value": "BEARER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "bearer_type", 
+    "value": "BEARER_HEADER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "request_token_url", 
+    "value": "api.linkedin.com/uas/oauth/requestToken"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "authorize_url", 
+    "value": "www.linkedin.com/uas/oauth/authorize"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "access_token_url", 
+    "value": "api.linkedin.com/uas/oauth/accessToken"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_id", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_secret", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "returns_token", 
+    "value": "1"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "redirect_uri", 
+    "value": "http://localhost:8000api/method/programmer.authorize"
+   }
+  ], 
+  "permissions": [
+   {
+    "description": "read and write to your employment information", 
+    "parameter": "None"
+   }
+  ], 
+  "provider_url": "www.linkedin.com", 
+  "resources": []
+ }, 
+ {
+  "active": 0, 
+  "api_auth_method": "oAuth2", 
+  "api_domain": "apis.live.net", 
+  "api_name": "Live Connect", 
+  "api_type": "Rest", 
+  "docstatus": 0, 
+  "doctype": "API", 
+  "https": 1, 
+  "keys": [], 
+  "methods": [], 
+  "modified": "2015-09-06 03:30:48.568103", 
+  "name": "Live Connect - Rest - oAuth2", 
+  "parameters": [
+   {
+    "ctx": "Class", 
+    "parameter": "signature_method", 
+    "value": "SIGNATURE_HMAC"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "signature_type", 
+    "value": "SIGNATURE_TYPE_AUTH_READER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "token_type", 
+    "value": "BEARER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "bearer_type", 
+    "value": "BEARER_URI"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "authorize_url", 
+    "value": "oauth.live.com/authorize"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "access_token_url", 
+    "value": "oauth.live.com/token"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_id", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_secret", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "redirect_uri", 
+    "value": "http://localhost:8000api/method/programmer.authorize"
+   }
+  ], 
+  "permissions": [
+   {
+    "description": "Read your basic info and contacts", 
+    "parameter": "w1.basic"
+   }, 
+   {
+    "description": "Access your information while you're not logged in. ", 
+    "parameter": "w1.offline_access"
+   }, 
+   {
+    "description": "Access your complete birthday", 
+    "parameter": "w1.birthday"
+   }, 
+   {
+    "description": "Read your callendars and events", 
+    "parameter": "w1.calendars"
+   }, 
+   {
+    "description": "Write to your calendars and events", 
+    "parameter": "w1.calendars_update"
+   }, 
+   {
+    "description": "Access your contacts birthdays.", 
+    "parameter": "w1.contacts_birthday"
+   }, 
+   {
+    "description": "Add new contacts to your calendars and events", 
+    "parameter": "w1.contacs_create"
+   }, 
+   {
+    "description": "Read your contacts calendars", 
+    "parameter": "w1.contacts_calendars"
+   }, 
+   {
+    "description": "Read your contacts photos", 
+    "parameter": "w1.contact_photos"
+   }, 
+   {
+    "description": "Read files that your contacts have shared with you", 
+    "parameter": "w1.contacts_skydrive"
+   }, 
+   {
+    "description": "read your email addresses", 
+    "parameter": "w1.emails"
+   }, 
+   {
+    "description": "Create events on your default calendar", 
+    "parameter": "w1.events_create"
+   }, 
+   {
+    "description": "Chat with your contacts using Live Messenger", 
+    "parameter": "w1.messenger"
+   }, 
+   {
+    "description": "Read your phone numbers", 
+    "parameter": "w1.phone_numbers"
+   }, 
+   {
+    "description": "Read your photos and other media", 
+    "parameter": "w1.photos"
+   }, 
+   {
+    "description": "Read your postal addresses", 
+    "parameter": "w1.postal_addresses"
+   }, 
+   {
+    "description": "Update your status message", 
+    "parameter": "w1.share"
+   }, 
+   {
+    "description": "Read files you've stored in Skydrive", 
+    "parameter": "w1.skydrive"
+   }, 
+   {
+    "description": "Write to files you've stored in Skydrive", 
+    "parameter": "w1.skydrive_update"
+   }, 
+   {
+    "description": "Read your employer and work position information", 
+    "parameter": "w1.work_profile"
+   }, 
+   {
+    "description": "Access the client ID's you use to interact with Live services", 
+    "parameter": "w1.applications"
+   }, 
+   {
+    "description": "Create new client ID's to interact with Live services", 
+    "parameter": "w1.applications_create"
+   }
+  ], 
+  "provider_url": "www.live.com", 
+  "resources": []
+ }, 
+ {
+  "active": 0, 
+  "api_auth_method": "oAuth2", 
+  "api_domain": "api.meetup.com", 
+  "api_name": "Meet Up", 
+  "api_type": "Rest", 
+  "docstatus": 0, 
+  "doctype": "API", 
+  "https": 1, 
+  "keys": [], 
+  "methods": [], 
+  "modified": "2015-09-06 03:33:17.919743", 
+  "name": "Meet Up - Rest - oAuth2", 
+  "parameters": [
+   {
+    "ctx": "Class", 
+    "parameter": "signature_method", 
+    "value": "SIGNATURE_HMAC"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "signature_type", 
+    "value": "SIGNATURE_TYPE_AUTH_READER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "token_type", 
+    "value": "BEARER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "bearer_type", 
+    "value": "BEARER_URI"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "authorize_url", 
+    "value": "secure.meetup.com/oauth2/authorize"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "access_token_url", 
+    "value": "secure.meetup.com/oauth2/access"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_id", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_secret", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "redirect_uri", 
+    "value": "http://localhost:8000api/method/programmer.authorize"
+   }
+  ], 
+  "permissions": [
+   {
+    "description": "Access your groups, create and edit events, and post photos.", 
+    "parameter": "None"
+   }, 
+   {
+    "description": "Send and receive messages", 
+    "parameter": "messaging"
+   }, 
+   {
+    "description": "Keep the authorization active for two weeks", 
+    "parameter": "ageless"
+   }
+  ], 
+  "provider_url": "www.meetup.com", 
+  "resources": []
+ }, 
+ {
+  "active": 0, 
+  "api_auth_method": "oAuth1", 
+  "api_domain": "api-public.netflix.com", 
+  "api_name": "Netflix", 
+  "api_type": "Rest", 
+  "docstatus": 0, 
+  "doctype": "API", 
+  "https": 0, 
+  "keys": [], 
+  "methods": [], 
+  "modified": "2015-09-06 03:39:02.187899", 
+  "name": "Netflix - Rest - oAuth1", 
+  "parameters": [
+   {
+    "ctx": "Class", 
+    "parameter": "signature_method", 
+    "value": "SIGNATURE_HMAC"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "signature_type", 
+    "value": "SIGNATURE_TYPE_QUERY"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "token_type", 
+    "value": "BEARER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "bearer_type", 
+    "value": "BEARER_HEADER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "request_token_url", 
+    "value": "api-public.netflix.com/oauth/request_token"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "authorize_url", 
+    "value": "api-user.netflix.com/oauth/login"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "access_token_url", 
+    "value": "api-public.netflix.com/oauth/access_token"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_id", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_secret", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "returns_token", 
+    "value": "1"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "redirect_uri", 
+    "value": "http://localhost:8000api/method/programmer.authorize"
+   }, 
+   {
+    "ctx": "Request Data", 
+    "parameter": "oauth_consumer_key", 
+    "value": "{client_id}"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "favicon_url", 
+    "value": "https://www.netflix.com/favicon.ico"
+   }
+  ], 
+  "permissions": [
+   {
+    "description": "Read and Manage your qeue", 
+    "parameter": "None"
+   }
+  ], 
+  "provider_url": "www.netflix.com", 
+  "resources": []
+ }, 
+ {
+  "active": 0, 
+  "api_auth_method": "oAuth1", 
+  "api_domain": "www.ohloh.net", 
+  "api_name": "Ohloh", 
+  "api_type": "Rest", 
+  "docstatus": 0, 
+  "doctype": "API", 
+  "https": 0, 
+  "keys": [], 
+  "methods": [], 
+  "modified": "2015-09-06 03:56:40.726521", 
+  "name": "Ohloh - Rest - oAuth1", 
+  "parameters": [
+   {
+    "ctx": "Class", 
+    "parameter": "signature_method", 
+    "value": "SIGNATURE_HMAC"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "signature_type", 
+    "value": "SIGNATURE_TYPE_AUTH_READER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "token_type", 
+    "value": "BEARER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "bearer_type", 
+    "value": "BEARER_HEADER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "request_token_url", 
+    "value": "www.ohloh.net/oauth/request_token"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "authorize_url", 
+    "value": "www.ohloh.net/oauth/authorize"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "access_token_url", 
+    "value": "www.ohloh.net/oauth/access_token"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_id", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_secret", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "returns_token", 
+    "value": "1"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "redirect_uri", 
+    "value": "http://localhost:8000api/method/programmer.authorize"
+   }
+  ], 
+  "permissions": [
+   {
+    "description": "Read and write to your software usage", 
+    "parameter": "None"
+   }
+  ], 
+  "provider_url": "www.ohloh.net", 
+  "resources": []
+ }, 
+ {
+  "active": 0, 
+  "api_auth_method": "oAuth2", 
+  "api_domain": "api.paypal.com", 
+  "api_name": "PayPal", 
+  "api_type": "Rest", 
+  "docstatus": 0, 
+  "doctype": "API", 
+  "https": 1, 
+  "keys": [], 
+  "methods": [], 
+  "modified": "2015-09-06 04:10:37.214618", 
+  "name": "PayPal - Rest - oAuth2", 
+  "parameters": [
+   {
+    "ctx": "Class", 
+    "parameter": "signature_method", 
+    "value": "SIGNATURE_HMAC"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "signature_type", 
+    "value": "SIGNATURE_TYPE_AUTH_READER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "token_type", 
+    "value": "BEARER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "bearer_type", 
+    "value": "BEARER_HEADER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "authorize_url", 
+    "value": "www.paypal.com/webapps/auth/protocol/openidconnect/v1/authorize"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "access_token_url", 
+    "value": "api.paypal.com/v1/identity/openidconnect/tokenservice"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_id", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_secret", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "redirect_uri", 
+    "value": "http://localhost:8000api/method/programmer.authorize"
+   }
+  ], 
+  "permissions": [
+   {
+    "description": "Access your user ID", 
+    "parameter": "openid"
+   }, 
+   {
+    "description": "Access your name, gender, date of birth and geographic region", 
+    "parameter": "profile"
+   }, 
+   {
+    "description": "access your email address", 
+    "parameter": "email"
+   }, 
+   {
+    "description": "Access your physical address information", 
+    "parameter": "address"
+   }, 
+   {
+    "description": "Access your phone number", 
+    "parameter": "phone"
+   }, 
+   {
+    "description": "Access your account information", 
+    "parameter": "https://uri.paypal.com/services/paypalattributes"
+   }, 
+   {
+    "description": "Access your payments", 
+    "parameter": "https://api.paypal.com/v1/payments/.*"
+   }, 
+   {
+    "description": "Access your credit cards", 
+    "parameter": "https://api.paypal.com/v1/vault/credit-card"
+   }, 
+   {
+    "description": "Access your credit card history", 
+    "parameter": "https://api.paypal.com/v1/vault/credit-card/.*"
+   }
+  ], 
+  "provider_url": "www.paypal.com", 
+  "resources": []
+ }, 
+ {
+  "active": 0, 
+  "api_auth_method": "oAuth1", 
+  "api_domain": "api.photobucket.com", 
+  "api_name": "Photobucket", 
+  "api_type": "Rest", 
+  "docstatus": 0, 
+  "doctype": "API", 
+  "https": 0, 
+  "keys": [], 
+  "methods": [], 
+  "modified": "2015-09-06 06:24:19.952600", 
+  "name": "Photobucket - Rest - oAuth1", 
+  "parameters": [
+   {
+    "ctx": "Class", 
+    "parameter": "signature_method", 
+    "value": "SIGNATURE_HMAC"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "signature_type", 
+    "value": "SIGNATURE_TYPE_QUERY"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "token_type", 
+    "value": "BEARER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "bearer_type", 
+    "value": "BEARER_HEADER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "request_token_url", 
+    "value": "api.photobucket.com/login/request"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "authorize_url", 
+    "value": "photobucket.com/apilogin/login"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "access_token_url", 
+    "value": "api.photobucket.com/login/access"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_id", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_secret", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "returns_token", 
+    "value": "1"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "redirect_uri", 
+    "value": "http://localhost:8000api/method/programmer.authorize"
+   }
+  ], 
+  "permissions": [], 
+  "provider_url": "www.photobucket.com", 
+  "resources": []
+ }, 
+ {
+  "active": 0, 
+  "api_auth_method": "oAuth1", 
+  "api_domain": "www.plurk.com", 
+  "api_name": "Plurk", 
+  "api_type": "Rest", 
+  "docstatus": 0, 
+  "doctype": "API", 
+  "https": 1, 
+  "keys": [], 
+  "methods": [], 
+  "modified": "2015-09-06 04:26:35.832769", 
+  "name": "Plurk - Rest - oAuth1", 
+  "parameters": [
+   {
+    "ctx": "Class", 
+    "parameter": "signature_method", 
+    "value": "SIGNATURE_HMAC"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "signature_type", 
+    "value": "SIGNATURE_TYPE_AUTH_READER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "token_type", 
+    "value": "BEARER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "bearer_type", 
+    "value": "BEARER_HEADER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "request_token_url", 
+    "value": "www.plurk.com/OAuth/request_token"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "authorize_url", 
+    "value": "www.plurk.com/OAuth/authorize"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "access_token_url", 
+    "value": "www.plurk.com/OAuth/access_token"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_id", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_secret", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "returns_token", 
+    "value": "1"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "redirect_uri", 
+    "value": "http://localhost:8000api/method/programmer.authorize"
+   }
+  ], 
+  "permissions": [
+   {
+    "description": "Access and update your profle and plurks", 
+    "parameter": "None"
+   }
+  ], 
+  "provider_url": "www.plurk.com", 
+  "resources": []
+ }, 
+ {
+  "active": 0, 
+  "api_auth_method": "oAuth1", 
+  "api_domain": "api.ravelry.com", 
+  "api_name": "Ravelry", 
+  "api_type": "Rest", 
+  "docstatus": 0, 
+  "doctype": "API", 
+  "https": 0, 
+  "keys": [], 
+  "methods": [], 
+  "modified": "2015-09-06 06:30:32.899107", 
+  "name": "Ravelry - Rest - oAuth1", 
+  "parameters": [
+   {
+    "ctx": "Class", 
+    "parameter": "signature_method", 
+    "value": "SIGNATURE_HMAC"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "signature_type", 
+    "value": "SIGNATURE_TYPE_AUTH_READER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "token_type", 
+    "value": "BEARER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "bearer_type", 
+    "value": "BEARER_HEADER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "request_token_url", 
+    "value": "https://www.ravelry.com/oauth/request_token"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "authorize_url", 
+    "value": "https://www.ravelry.com/oauth/authorize"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "access_token_url", 
+    "value": "https://www.ravelry.com/oauth/access_token"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_id", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_secret", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "returns_token", 
+    "value": "1"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "redirect_uri", 
+    "value": "http://localhost:8000api/method/programmer.authorize"
+   }
+  ], 
+  "permissions": [
+   {
+    "description": "Read and write to your knitting data", 
+    "parameter": "None"
+   }
+  ], 
+  "provider_url": "www.ravelry.com", 
+  "resources": []
+ }, 
+ {
+  "active": 0, 
+  "api_auth_method": "oAuth1", 
+  "api_domain": "api.rdio.com", 
+  "api_name": "Rdio", 
+  "api_type": "Rest", 
+  "docstatus": 0, 
+  "doctype": "API", 
+  "https": 0, 
+  "keys": [], 
+  "methods": [], 
+  "modified": "2015-09-06 06:44:43.971441", 
+  "name": "Rdio - Rest - oAuth1", 
+  "parameters": [
+   {
+    "ctx": "Class", 
+    "parameter": "signature_method", 
+    "value": "SIGNATURE_HMAC"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "signature_type", 
+    "value": "SIGNATURE_TYPE_AUTH_READER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "token_type", 
+    "value": "BEARER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "bearer_type", 
+    "value": "BEARER_HEADER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "request_token_url", 
+    "value": "api.rdio.com/oauth/request_token"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "authorize_url", 
+    "value": "www.rdio.com/account/oauth1/authorize"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "access_token_url", 
+    "value": "api.rdio.com/oauth/access_token"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_id", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_secret", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "returns_token", 
+    "value": "1"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "redirect_uri", 
+    "value": "http://localhost:8000api/method/programmer.authorize"
+   }
+  ], 
+  "permissions": [
+   {
+    "description": "Access and manage your music", 
+    "parameter": "None"
+   }
+  ], 
+  "provider_url": "www.rdio.com", 
+  "resources": []
+ }, 
+ {
+  "active": 0, 
+  "api_auth_method": "oAuth2", 
+  "api_domain": "oauth.reddit.com", 
+  "api_name": "Reddit", 
+  "api_type": "Rest", 
+  "docstatus": 0, 
+  "doctype": "API", 
+  "https": 1, 
+  "keys": [], 
+  "methods": [], 
+  "modified": "2015-09-06 06:56:23.669691", 
+  "name": "Reddit - Rest - oAuth2", 
+  "parameters": [
+   {
+    "ctx": "Class", 
+    "parameter": "signature_method", 
+    "value": "SIGNATURE_HMAC"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "signature_type", 
+    "value": "SIGNATURE_TYPE_AUTH_READER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "token_type", 
+    "value": "BEARER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "bearer_type", 
+    "value": "BEARER_HEADER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "authorize_url", 
+    "value": "ssl.reddit.com/api/v1/authorize"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "access_token_url", 
+    "value": "ssl.reddit.com/api/v1/access_token"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_id", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_secret", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "redirect_uri", 
+    "value": "http://localhost:8000api/method/programmer.authorize"
+   }, 
+   {
+    "ctx": "Request Params - Authorize", 
+    "parameter": "duration", 
+    "value": "permanent"
+   }
+  ], 
+  "permissions": [
+   {
+    "description": "Access your identity information", 
+    "parameter": "identity"
+   }, 
+   {
+    "description": "Read information about articles", 
+    "parameter": "read"
+   }, 
+   {
+    "description": "Vote on articles", 
+    "parameter": "vote"
+   }, 
+   {
+    "description": "Submit new articles and comments", 
+    "parameter": "submit"
+   }, 
+   {
+    "description": "Edit your posts and comments", 
+    "parameter": "edit"
+   }, 
+   {
+    "description": "Manage your subreddits", 
+    "parameter": "mysubreddits"
+   }, 
+   {
+    "description": "View your moderation logs", 
+    "parameter": "modlog"
+   }, 
+   {
+    "description": "Moderate posts in your subreddits", 
+    "parameter": "modposts"
+   }, 
+   {
+    "description": "Manage and assign flair in your subreddits", 
+    "parameter": "modflair"
+   }, 
+   {
+    "description": "Manage the configuration of your subreddits", 
+    "parameter": "modconfig"
+   }, 
+   {
+    "description": "Read and write to your private messages", 
+    "parameter": "privatemessages"
+   }
+  ], 
+  "provider_url": "www.reddit.com", 
+  "resources": []
+ }, 
+ {
+  "active": 0, 
+  "api_auth_method": "oAuth2", 
+  "api_domain": "api.rememberthemilk.com", 
+  "api_name": "Remember The Milk", 
+  "api_type": "Rest", 
+  "docstatus": 0, 
+  "doctype": "API", 
+  "https": 0, 
+  "keys": [], 
+  "methods": [], 
+  "modified": "2015-09-06 07:24:06.729586", 
+  "name": "Remember The Milk - Rest - oAuth2", 
+  "parameters": [
+   {
+    "ctx": "Class", 
+    "parameter": "signature_method", 
+    "value": "SIGNATURE_HMAC"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "signature_type", 
+    "value": "SIGNATURE_TYPE_AUTH_READER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "token_type", 
+    "value": "BEARER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "bearer_type", 
+    "value": "BEARER_HEADER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "authorize_url", 
+    "value": "www.rememberthemilk.com/services/auth/"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "access_token_url", 
+    "value": "api.rememberthemilk.com/services/rest/"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_id", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_secret", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "redirect_uri", 
+    "value": "http://localhost:8000api/method/programmer.authorize"
+   }, 
+   {
+    "ctx": "Request Params - Authorize", 
+    "parameter": "api_key", 
+    "value": "{client_id}"
+   }
+  ], 
+  "permissions": [
+   {
+    "description": "Access your tasks, notes and contacts", 
+    "parameter": "read"
+   }, 
+   {
+    "description": "Access, add and edit your tasks, notes and contacts", 
+    "parameter": "write"
+   }, 
+   {
+    "description": "Access, add, edit and delete your tasks, notes and contacts", 
+    "parameter": "delete"
+   }
+  ], 
+  "provider_url": "rememberthemilk.com", 
+  "resources": []
+ }, 
+ {
+  "active": 0, 
+  "api_auth_method": "oAuth2", 
+  "api_domain": "api.runkeeper.com", 
+  "api_name": "Runkeeper", 
+  "api_type": "Rest", 
+  "docstatus": 0, 
+  "doctype": "API", 
+  "https": 1, 
+  "keys": [], 
+  "methods": [], 
+  "modified": "2015-09-06 07:26:33.490928", 
+  "name": "Runkeeper - Rest - oAuth2", 
+  "parameters": [
+   {
+    "ctx": "Class", 
+    "parameter": "signature_method", 
+    "value": "SIGNATURE_HMAC"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "signature_type", 
+    "value": "SIGNATURE_TYPE_AUTH_READER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "token_type", 
+    "value": "BEARER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "bearer_type", 
+    "value": "BEARER_HEADER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "authorize_url", 
+    "value": "runkeeper.com/apps/authorize"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "access_token_url", 
+    "value": "runkeeper.com/apps/token"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_id", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_secret", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "redirect_uri", 
+    "value": "http://localhost:8000api/method/programmer.authorize"
+   }
+  ], 
+  "permissions": [
+   {
+    "description": "Access your health and fitness data", 
+    "parameter": "None"
+   }
+  ], 
+  "provider_url": "runkeeper.com", 
+  "resources": []
+ }, 
+ {
+  "active": 0, 
+  "api_auth_method": "oAuth2", 
+  "api_domain": "api.soundcloud.com", 
+  "api_name": "Sound Cloud", 
+  "api_type": "Rest", 
+  "docstatus": 0, 
+  "doctype": "API", 
+  "https": 1, 
+  "keys": [], 
+  "methods": [], 
+  "modified": "2015-09-06 07:31:18.519440", 
+  "name": "Sound Cloud - Rest - oAuth2", 
+  "parameters": [
+   {
+    "ctx": "Class", 
+    "parameter": "signature_method", 
+    "value": "SIGNATURE_HMAC"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "signature_type", 
+    "value": "SIGNATURE_TYPE_AUTH_READER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "token_type", 
+    "value": "BEARER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "bearer_type", 
+    "value": "BEARER_HEADER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "authorize_url", 
+    "value": "soundcloud.com/connect"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "access_token_url", 
+    "value": "api.soundcloud.com/oauth2/token"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_id", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_secret", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "redirect_uri", 
+    "value": "http://localhost:8000api/method/programmer.authorize"
+   }
+  ], 
+  "permissions": [
+   {
+    "description": "Read and post sounds to the cloud", 
+    "parameter": "None"
+   }
+  ], 
+  "provider_url": "soundcloud.com", 
+  "resources": []
+ }, 
+ {
+  "active": 0, 
+  "api_auth_method": "oAuth2", 
+  "api_domain": "api.spotify.com", 
+  "api_name": "Spotify", 
+  "api_type": "Rest", 
+  "docstatus": 0, 
+  "doctype": "API", 
+  "https": 1, 
+  "keys": [], 
+  "methods": [], 
+  "modified": "2015-09-06 07:40:38.786072", 
+  "name": "Spotify - Rest - oAuth2", 
+  "parameters": [
+   {
+    "ctx": "Class", 
+    "parameter": "signature_method", 
+    "value": "SIGNATURE_HMAC"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "signature_type", 
+    "value": "SIGNATURE_TYPE_AUTH_READER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "token_type", 
+    "value": "BEARER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "bearer_type", 
+    "value": "BEARER_HEADER"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "authorize_url", 
+    "value": "accounts.spotify.com/authorize"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "access_token_url", 
+    "value": "accounts.spotify.com/api/token"
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_id", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "client_secret", 
+    "value": null
+   }, 
+   {
+    "ctx": "Class", 
+    "parameter": "redirect_uri", 
+    "value": "http://localhost:8000api/method/programmer.authorize"
+   }
+  ], 
+  "permissions": [
+   {
+    "description": "Read your public information", 
+    "parameter": "None"
+   }, 
+   {
+    "description": "Access your private playlists", 
+    "parameter": "playlist-read-private"
+   }, 
+   {
+    "description": "Manage your private playlists", 
+    "parameter": "playlist-modify-private"
+   }, 
+   {
+    "description": "Play music and control playback on your other devices", 
+    "parameter": "streaming"
+   }, 
+   {
+    "description": "Manage who you are following", 
+    "parameter": "user-follow-modify"
+   }, 
+   {
+    "description": "Access your followers and who you are following", 
+    "parameter": "user-follow-read"
+   }, 
+   {
+    "description": "Access your saved track and albums", 
+    "parameter": "user-library-read"
+   }, 
+   {
+    "description": "Manage your saved tracks and albums", 
+    "parameter": "user-library-modify"
+   }, 
+   {
+    "description": "Access your subscription details", 
+    "parameter": "user-read-private"
+   }, 
+   {
+    "description": "Receive your birthdate", 
+    "parameter": "user-read-birthdate"
+   }, 
+   {
+    "description": "Get your real email address", 
+    "parameter": "user-read-email"
+   }
+  ], 
+  "provider_url": "spotify.com", 
+  "resources": []
+ }
+]
